@@ -1,24 +1,71 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| name     | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :retouch_users
+- has_many :retouches, through: retouch_users
+- has_many :messages
+- has_one  :profiles
 
-* Configuration
+## retouches テーブル
 
-* Database creation
+| Column  | Type   | Options     |
+| ------- | ------ | ----------- |
+| title   | string | null: false |
+| comment | string |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :retouch_users
+- has_many :users, through: retouch_users
+- has_many :messages
+- has_many :profiles
 
-* Services (job queues, cache servers, search engines, etc.)
+## retouch_users テーブル
 
-* Deployment instructions
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| retouch | references | null: false, foreign_key: true |
+|  user   | references | null: false, foreign_key: true |
 
-* ...
+### Association
+
+- belongs_to :retouch
+- belongs_to :user
+
+## messages テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| comment | string     |                                |
+| retouch | references | null: false, foreign_key: true |
+| user    | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :retouch
+- belongs_to :user
+
+## profiles テーブル
+
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| nickname     | string     |                                |
+| genre_id     | integer    |                                |
+| age_id       | integer    |                                |
+| introduction | text       |                                |
+| retouch      | references | null: false, foreign_key: true |
+| user         | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :retouch
+- belongs_to :user
