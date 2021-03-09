@@ -1,2 +1,59 @@
-<h1>Retouches#index</h1>
-<p>Find me in app/views/retouches/index.html.erb</p>
+<%= render partial: "header" %>
+
+<%# <% 画面上部のアプリメインテーマ説明部 %> 
+<div class='main'>
+  <div class='title-contents'>
+    <div class='service-image'>
+      <%# <%= image_tag("bridge-4636745__480.jpg", class:'top-image')%>
+        <div class='service'>
+          <h2 class='service-title'>
+            sublim
+          </h2>
+          <p class='service-explain'>
+            こんなイラストを描きたいけどうまくいかない。自分で描いたイラストのどこを修正すればいいのかわからない。
+          </p>
+          <p class='service-explain'>
+            そんな疑問を世界中の人に聞いてみよう！自分で描いたイラストに世界中の人が修正を加えてくれます！
+          </p>
+          <p class='service-explain'>
+            修正を加えた人も一人では気づけなかった部分に気づいてきっと前よりスキルは上がるはず！
+            <%# </p>
+          <p class='service-explain'>
+            みんなで教え合いよりよい作品を作り上げよう！
+          </p> %>
+        </div>
+    </div>
+  </div>
+</div>
+
+  <%# retouch_list %>
+  <div class='retouch-contents'>
+   <div class='reqest-title-all'>
+    <h2 class='request-title'>修正依頼</h2>
+    <%= link_to '新規投稿', "#", class: "request-subtitle" %>
+   </div>
+    <ul class='retouch-lists'>
+      <li class='list'>
+        <%= image_tag "cat.jpg", class: "request-img" %>
+        <div class='request-info'>
+          <h3 class='request-name'>
+            リクエストタイトル
+          </h3>
+          <div class='request-junre'>
+            <span>アニメ・漫画</span>
+          </div>
+          <div class='request-detail'>
+            <p>リクエスト詳細</p>
+            <p class='request-detail-text'>
+              ここに説明を記入していきます。
+              どこを直して欲しいのかどんな感じに直して欲しいのか。
+            </P>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <%# /商品一覧 %>
+</div>
+
+<%= render partial: "footer" %>
