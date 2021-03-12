@@ -1,0 +1,58 @@
+<div class='app-name'>
+    <div class='top-rogo'>
+      <%= image_tag("logo1.jpg", class:'top-image')%>
+      <h1 class='subtitle'>美しいを追求</h1>
+    </div>
+  </div>
+  <div class='line'>
+</div>
+
+<%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+  <%# <%= render "devise/shared/error_messages", resource: resource %> 
+  <div class="registration-view-Description">
+    <h2>新規ユーザー登録</h2>
+  </div>
+
+<div class="registration-form-all">
+<div class="registration-form-block">
+<h2 class="registration-view-sign-up">情報を入力してください</h2>
+  <div class="registration-field">
+    <%= f.label :ユーザー名 %> <br />
+    <label class="registration-field-sub">12文字以内で登録してください</label><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="registration-field">
+    <%= f.label :メールアドレス %><br />
+    <label class="registration-field-sub">メールアドレスは公開されません</label><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="registration-field">
+    <%= f.label :パスワード %><br />
+    <label class="registration-field-sub">６文字以上の英数字でご記入ください</label><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="registration-field">
+    <%= f.label :パスワード（確認用） %><br />
+    <label class="registration-field-sub">パスワードを再度ご入力ください</label><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="registration-actions">
+    <%= f.submit "ユーザー登録", class: "sign-up-registration-btn"%>
+  </div>
+
+  <div class='registration-navigate'>
+    <h2>新規登録はこちらから</h2>
+      <ul class='lists-registration'>
+        <li><%= link_to '新規登録', new_user_registration_path,  class: "sign-up" %></li>
+      </ul>
+    </div>
+</div>
+
+</div>
+<% end %>
+
+<%# <%= render "devise/shared/links" %>
