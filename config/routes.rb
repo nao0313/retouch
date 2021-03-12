@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'retouches#index'
-  resources :retouches, only: [:index]
+  root to: 'fixes#index'
+  resources :fixes, only: [:index, :new]
 end

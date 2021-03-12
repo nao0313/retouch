@@ -10,12 +10,12 @@
 
 ### Association
 
-- has_many :retouch_users
-- has_many :retouches, through: retouch_users
+- has_many :fix_users
+- has_many :fixes, through: fix_users
 - has_many :messages
 - has_one  :profiles
 
-## retouches テーブル
+## fixes テーブル
 
 | Column  | Type   | Options     |
 | ------- | ------ | ----------- |
@@ -24,12 +24,12 @@
 
 ### Association
 
-- has_many :retouch_users
-- has_many :users, through: retouch_users
+- has_many :fix_users
+- has_many :users, through: fix_users
 - has_many :messages
 - has_many :profiles
 
-## retouch_users テーブル
+## fix_users テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
@@ -51,7 +51,7 @@
 
 ### Association
 
-- belongs_to :retouch
+- belongs_to :fix
 - belongs_to :user
 - has_one_attached :image
 
@@ -68,5 +68,5 @@
 
 ### Association
 
-- belongs_to :retouch
+- belongs_to :fix
 - belongs_to :user
