@@ -2,16 +2,18 @@
   border: 1px solid darkred;
 } */
 
-.title-contents {
-  color: #ffffff;
+/* .title-contents {
+  color: rgb(0, 0, 0);
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-}
+} */
 
 
 
 .service {
   padding-bottom: 5px;
-  background: url("top1.jpg") center center no-repeat;
+  background: url("top.jpg") center center no-repeat;
+  background-color:rgba(155, 155, 155, 0.8);
+  background-blend-mode:lighten;
   background-size: 100%, 80%;
   padding: 3vh ;
   margin: 0 100px;
@@ -22,11 +24,16 @@
 
 .service-title {
   font-size: 8vh;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
   
 }
 .service-explain {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 15px;
+  font-weight: bolder;
+  color: rgb(75, 75, 75);
+  text-shadow: 0 0 5px  rgba(255, 255, 255, 0.9);
 }
 
 @media (max-width: 599px){
