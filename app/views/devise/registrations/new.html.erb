@@ -18,7 +18,7 @@
 <h2 class="registration-view-sign-up">情報を入力してください</h2>
   <div class="registration-field">
     <%= f.label :ユーザー名 %> <br />
-    <label class="registration-field-sub">ユーザーネームを登録してください</label><br />
+    <label class="registration-field-sub">12文字以内で登録してください</label><br />
     <%= f.text_field :name, autofocus: true %>
   </div>
 
@@ -30,6 +30,7 @@
 
   <div class="registration-field">
     <%= f.label :パスワード %><br />
+    <label class="registration-field-sub">６文字以上の英数字でご記入ください</label><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
