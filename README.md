@@ -53,6 +53,7 @@
 
 - belongs_to :retouch
 - belongs_to :user
+- has_one_attached :image
 
 ## profiles テーブル
 
