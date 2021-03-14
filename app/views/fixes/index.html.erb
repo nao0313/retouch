@@ -60,7 +60,10 @@
       <% end %>
     </ul>
   </div>
-  <%# /商品一覧 %>
+</div>
+
+<div class='p-top__paginate'>
+  <%= paginate @fixes %>
 </div>
 
 <%= render partial: "footer" %>
