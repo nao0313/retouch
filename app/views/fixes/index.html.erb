@@ -1,0 +1,66 @@
+<%= render partial: "header" %>
+
+<%# <% 画面上部のアプリメインテーマ説明部 %> 
+<div class='main'>
+  <div class='title-contents'>
+    <div class='service-image'>
+        <div class='service'>
+          <h2 class='service-title'>
+           illustear
+          </h2>
+          <p class='service-explain'>
+            イラスト修正アプリillustearはイラストを描きたいけどうまくいかない。自分で描いたイラストのどこを修正すればいいのかわからない。
+          </p>
+          <p class='service-explain'>
+            そんな疑問を世界中の人に聞いてみよう！自分で描いたイラストに世界中の人が修正を加えてくれる！
+          </p>
+          <p class='service-explain'>
+            修正を加えた人も一人では気づけなかった部分に気づいてきっと前よりスキルは上がるはず！
+          </p>
+          <%# <p class='service-explain'>
+            みんなで教え合いよりよい作品を作り上げよう！
+          </p>  %>
+        </div>
+    </div>
+  </div>
+</div>
+
+  <%# retouch_list %>
+  <div class='retouch-contents'>
+   <div class='reqest-title-all'>
+    <h2 class='request-title'>修正依頼</h2>
+    <%= link_to '新規投稿', new_fix_path, class: "request-subtitle" %>
+   </div>
+    <ul class='retouch-lists'>
+    <% @fixes.each do |fix| %>
+      <li class='list'>
+        <%= link_to image_tag fix.image, class: "request-img" %>
+        <div class='request-info'>
+          <h3 class='request-name'>
+          <span class='index_fix_title_name'>タイトル :</span><br>
+            <div class='index_fix_title'>
+              
+              <%= link_to fix.title, class: :top_fix_title, method: :get %>
+            </div>
+          </h3>
+
+          <div class='request-genre'>
+              <span class='index_fix_genre'>ジャンル :</span><%= fix.genre.name %>
+          </div>
+          <div class='request-detail'>
+            <p>リクエスト詳細 :</p>
+            <p class='request-detail-text'>
+              <div class='index_fix_comment'>
+                <%= fix.comment %>
+              </div>
+            </P>
+          </div>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <%# /商品一覧 %>
+</div>
+
+<%= render partial: "footer" %>
