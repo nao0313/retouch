@@ -1,0 +1,59 @@
+<%= render "shared/second-header"%>
+
+  <h2 class="retouch-fix-title">修正リクエストの情報を入力</h2>
+  <div class="retouch-fix-main">
+    
+    <%= form_with model: @fixes, local: true do |f| %>
+
+ 
+    <%# <%= render partial: 'shared/error_messages', locals: { model: f.object } %>
+
+
+
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        修正して欲しい画像<span class="indispensable"> 必須 </span>
+        <div class="img-file">
+        （JPEG PNG形式のみ）
+        </div>
+        
+      </div>
+      <div class="click-upload">
+        <%= f.file_field :image, id:"retouch-fix-image"%>
+      </div>
+    </div>
+
+    <div class="new-request">
+      <div class="weight-bold-text">
+        タイトル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :title, class:"request-text", id:"request-name", placeholder:"タイトル（必須 26文字まで)", maxlength:"26" %>
+      <div class="request-explain">
+        <div class="weight-bold-text">
+          修正コメント
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :comment, class:"request-comment", id:"request-info", placeholder:"リクエスト詳細（必須 1,000文字まで）"  ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <div class="request-genre-details">
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"request-category"}) %>
+      </div>
+    </div>
+
+    <div class="request-btn-contents">
+      <%= f.submit "依頼作成" ,class:"request-btn" %>
+      <div class="back-btn-position">
+      <%=link_to 'TOP', root_path, class:"back-btn" %>
+      </div>
+    </div>
+
+  </div>
+  <% end %>
