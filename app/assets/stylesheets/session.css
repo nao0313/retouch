@@ -23,6 +23,7 @@
   margin-top: 5vh;
   border-radius: 10px;
   padding-top: 50px;
+  margin-bottom: 100px;
 }
 
 .session-field{
@@ -35,7 +36,7 @@
 .login-session-btn{
   display: flex;
   justify-content: center;
-  margin-top: 20%;
+  margin-top: 40%;
   width: 150%;
   background: rgb(94, 161, 248);
   border: 1px solid rgb(94, 161, 248);
