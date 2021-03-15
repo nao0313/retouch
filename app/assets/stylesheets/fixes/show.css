@@ -1,0 +1,74 @@
+.retouch-request-all{
+  padding-top: 10vh;
+  background-color: rgb(219, 219, 219);
+  padding-bottom: 10vh;
+}
+.retouch-request-brock{
+
+}
+.center {
+
+
+}
+.list-img {
+  text-align: center;
+}
+.request_list_img{
+  height: 100%;
+  width: auto;
+}
+.retouch-request-contents {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 255, 255);
+  width: 600px;
+}
+h1{
+  font-size: 18px;
+  font-weight: bold;
+}
+.retouch-request-user-name{
+  padding: 50px 50px 5px 50px;
+}
+.retouch-request-title {
+  padding: 0px 50px 0 50px;
+}
+.retouch-request-genre{
+  font-size: 14px;
+  padding:5px 50px 0 50px;
+  color: rgba(85, 85, 85, 0.8);
+}
+.retouch-request-comment{
+  font-size: 14px;
+  padding:5px 50px 50px 50px;
+  color: rgba(85, 85, 85, 0.8);
+}
+
+
+@media (max-width: 599px){
+  .request_list_img{
+    width: 100%;
+  }
+  .retouch-request-contents {
+    width: 100%;
+    margin: 0;
+  }
+  .retouch-request-user-name{
+    padding: 30px 30px 0 30px;
+  }
+  .retouch-request-title{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 30px 0 30px;
+  }
+  .retouch-request-genre{
+    font-size: 15px;
+    padding:5px 30px 0 30px;
+    color: rgba(85, 85, 85, 0.8);
+  }
+  .retouch-request-comment{
+    font-size: 15px;
+    padding:5px 30px 30px 30px;
+    color: rgba(85, 85, 85, 0.8);
+  }
+}

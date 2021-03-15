@@ -1,0 +1,33 @@
+<%= render "shared/second-header"%>
+
+<ul>
+<div class="retouch-request-all">
+  <div class="retouch-request-brock">
+    <li class="center">
+
+    <div class="list-img">
+      <%= image_tag @fixes.image,class: :request_list_img %>
+    </div>
+      <div class="retouch-request-contents">
+        <h1 class="retouch-request-user-name">
+          <%= @fixes.user.name%>
+        </h1>
+        <h1 class="retouch-request-title">
+          <%= @fixes.title %>
+        </h1>
+        <h2 class="retouch-request-genre">
+          ジャンル： 
+          <%= @fixes.genre.name %>
+        </h2>
+        <h2 class="retouch-request-comment">
+          リクエスト詳細:<br>
+          <%= @fixes.comment %>
+      </div>
+    </li>
+
+    
+  </div>
+</div>
+</ul>
+
+<%= render  "fixes/footer" %>

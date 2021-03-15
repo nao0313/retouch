@@ -34,13 +34,14 @@
     <ul class='retouch-lists'>
     <% @fixes.each do |fix| %>
       <li class='list'>
-        <%= link_to image_tag fix.image, class: "request-img" %>
+      <%= link_to fix_path(fix.id), method: :get do %>
+        <%= image_tag fix.image,class: :request_img, method: :get %>
         <div class='request-info'>
           <h3 class='request-name'>
           <span class='index_fix_title_name'>タイトル :</span><br>
             <div class='index_fix_title'>
               
-              <%= link_to fix.title, class: :top_fix_title, method: :get %>
+              <%= link_to fix.title, fix_path(fix.id), class: :top_fix_title, method: :get %>
             </div>
           </h3>
 
@@ -56,6 +57,7 @@
             </P>
           </div>
         </div>
+        <% end %>
       </li>
       <% end %>
     </ul>

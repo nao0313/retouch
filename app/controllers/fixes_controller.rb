@@ -17,6 +17,10 @@ class FixesController < ApplicationController
       render :new
     end
   end
+  
+  def show
+    @fixes = Fix.find(params[:id])
+  end
 
   def destroy
     @fixes = Fix.find(params[:id])
