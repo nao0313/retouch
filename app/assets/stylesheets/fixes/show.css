@@ -53,7 +53,22 @@ h1{
   padding:5px 50px 50px 50px;
   color: rgba(85, 85, 85, 0.8);
 }
+.request-room {
+  text-align: center;
+  margin-top: 50px;
+}
 
+.request-room-btn a{
+  text-decoration: none;
+  font-size: 20px;
+  color: aliceblue;
+  background-color: rgb(94, 161, 248);
+  border-radius: 30px;
+  padding: 15px 30px;
+}
+.request-room-btn a:hover{
+  background-color: rgb(135, 184, 248);
+}
 
 @media (max-width: 599px){
   .request_list_img{
