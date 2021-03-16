@@ -4,7 +4,6 @@
   padding-bottom: 10vh;
 }
 .retouch-request-brock{
-
 }
 .center {
 
@@ -14,8 +13,8 @@
   text-align: center;
 }
 .request_list_img{
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 80%;
 }
 .retouch-request-contents {
   margin-left: auto;
@@ -29,6 +28,17 @@ h1{
 }
 .retouch-request-user-name{
   padding: 50px 50px 5px 50px;
+
+}
+.retouch-request-user-name a{
+  text-decoration: none;
+  color: black;
+}
+.retouch-request-user-name a:hover {
+  width: 30px;
+  padding: 5px 20px 5px 0px;
+  color: rgb(104, 103, 103);
+
 }
 .retouch-request-title {
   padding: 0px 50px 0 50px;
