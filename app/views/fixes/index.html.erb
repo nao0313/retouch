@@ -37,13 +37,16 @@
       <%= link_to fix_path(fix.id), method: :get do %>
         <%= image_tag fix.image,class: :request_img, method: :get %>
         <div class='request-info'>
-          <h3 class='request-name'>
-          <span class='index_fix_title_name'>タイトル :</span><br>
+          <div class='request-name'>
+          <div class='index-user-name'>
+            <%= fix.user.name %>
+          </div>
+          <%# <span class='index_fix_title_name'>タイトル :</span><br> %>
             <div class='index_fix_title'>
               
               <%= link_to fix.title, fix_path(fix.id), class: :top_fix_title, method: :get %>
             </div>
-          </h3>
+          </div>
 
           <div class='request-genre'>
               <span class='index_fix_genre'>ジャンル :</span><%= fix.genre.name %>

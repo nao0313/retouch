@@ -1,5 +1,7 @@
 <%= render "shared/second-header"%>
 
+
+
 <ul>
 <div class="retouch-request-all">
   <div class="retouch-request-brock">
@@ -10,7 +12,7 @@
     </div>
       <div class="retouch-request-contents">
         <h1 class="retouch-request-user-name">
-          <%= @fixes.user.name%>
+          <%= link_to @fixes.user.name%>
         </h1>
         <h1 class="retouch-request-title">
           <%= @fixes.title %>
