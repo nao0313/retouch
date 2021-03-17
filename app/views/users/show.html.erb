@@ -19,10 +19,10 @@
            </div>
            <div class="myreq-btn">
               <div class="myreq-edit">
-                <%= link_to "編 集", class: "myreq-edit-btn" %>
+                <%= link_to "編 集", edit_fix_path(fix.id), class: "myreq-edit-btn" %>
               </div>
               <div class="myreq-destroy">
-                <%= link_to "削 除" %>
+                <%= link_to "削 除",fix_path(fix.id), class: "myreq-destroy-btn", method: :delete %>
               </div>
             </div>
           </div>

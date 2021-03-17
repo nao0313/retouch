@@ -22,6 +22,19 @@ class FixesController < ApplicationController
     @fixes = Fix.find(params[:id])
   end
 
+  def edit
+    @fixes = Fix.find(params[:id])
+  end
+
+  def update
+    @fixes = Fix.find(params[:id])
+    if @fixes.update(fixes_params)
+      redirect_to user_path
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @fixes = Fix.find(params[:id])
     redirect_to root_path if @fixes.destroy
