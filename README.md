@@ -10,35 +10,51 @@
 
 ### Association
 
-- has_many :retouch_users
-- has_many :retouches, through: retouch_users
-- has_many :messages
+- has_many :fixes
+- has_many :room_users
+- has_many :room, through: room_users
+- has_many :message
 - has_one  :profiles
 
-## retouches テーブル
+## fixes テーブル
 
-| Column  | Type   | Options     |
-| ------- | ------ | ----------- |
-| title   | string | null: false |
-| comment | string |
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| title    | string     | null: false                    |
+| comment  | text       | null: false                    |
+| genre_id | integer    | null: false                    |
+| user     | references | null: false, foreign_key: true |
 
 ### Association
 
-- has_many :retouch_users
-- has_many :users, through: retouch_users
-- has_many :messages
-- has_many :profiles
+- belongs_to :user
+- has_one    :room
+- has_one_attached :image
 
-## retouch_users テーブル
+## rooms テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| retouch | references | null: false, foreign_key: true |
+|  name   | string     | null: false                    |
+|  fixes  | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :fix
+- has_many   :room_users
+- has_many   :user, through: room_users
+- has_many   :message
+
+## room_users テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+|  room   | references | null: false, foreign_key: true |
 |  user   | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :retouch
+- belongs_to :room
 - belongs_to :user
 
 ## messages テーブル
@@ -46,27 +62,25 @@
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
 | comment | string     |                                |
-| retouch | references | null: false, foreign_key: true |
+| room    | references | null: false, foreign_key: true |
 | user    | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :retouch
-- belongs_to :user
+- has_many :fixes
+- has_many :users
 - has_one_attached :image
 
 ## profiles テーブル
 
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
-| nickname     | string     |                                |
 | genre_id     | integer    |                                |
 | age_id       | integer    |                                |
 | introduction | text       |                                |
-| retouch      | references | null: false, foreign_key: true |
 | user         | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :retouch
-- belongs_to :user
+- has_one :user
+- has_one_attached :image

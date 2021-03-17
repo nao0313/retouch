@@ -1,11 +1,4 @@
-  <div class='app-name'>
-    <div class='top-rogo'>
-      <%= image_tag("logo1.jpg", class:'top-image')%>
-      <h1 class='subtitle'>美しいを追求</h1>
-    </div>
-  </div>
-  <div class='line'>
-  </div>
+<%= render "shared/second-header"%>
 
   <div class="session-view-Description">
     <h2>会員の方はこちらからログインしてください</h2>
@@ -31,12 +24,8 @@
       </div>
     <% end %>
 
-    <div class='session-navigate'>
-    <h2>新規登録はこちらから</h2>
-      <ul class='lists-session'>
-        <li><%= link_to '新規登録', new_user_registration_path,  class: "sign-up" %></li>
-      </ul>
-    </div>
+    
+  </div>
 </div>
 
-<%# <%= render "devise/shared/links" %>
+<%= render  "fixes/footer" %>

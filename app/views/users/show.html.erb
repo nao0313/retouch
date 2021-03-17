@@ -1,0 +1,69 @@
+<%= render "shared/second-header"%>
+
+<div class="myreq-main-title">
+  <h1 class="myreq">MY REQ</h1>
+</div>
+
+
+  <ul class="request-index-block">
+  <% @fixes.each do |fix| %>
+    <li class='list-request'>
+      <div class="myreq-side-block">
+
+      
+      
+      <%# <%= link_to fix_path(fix.id), method: :get do %> 
+         <div class='request-index-info'>
+           <div class="request-index-image">
+            <%= image_tag fix.image,class: :request_index_img, method: :get %>
+           </div>
+           <div class="myreq-btn">
+              <div class="myreq-edit">
+                <%= link_to "編 集", edit_fix_path(fix.id), class: "myreq-edit-btn" %>
+              </div>
+              <div class="myreq-destroy">
+                <%= link_to "削 除",fix_path(fix.id), class: "myreq-destroy-btn", method: :delete %>
+              </div>
+            </div>
+          </div>
+
+            <div class='request-index-name'>
+              
+              <div class='index_fix_title_name'>
+              <span >タイトル :</span><br>
+              <div class='request-index_fix_title'>
+                <%= link_to fix.title, fix_path(fix.id), class: :top_fix_title, method: :get %>
+              </div>
+              </div>
+
+              <div class='request-index-genre'>
+                <span class='request-index_fix_genre'>ジャンル : </span>
+                <%= fix.genre.name %>
+              </div>
+
+              <div class='request-index-detail'>
+                <p>リクエスト詳細 :</p>
+                <div class='request-index-detail-text'>
+                  <div class='request-index_fix_comment'>
+                    <%= fix.comment %>
+                 </div>
+                </div>
+              </div> 
+
+              
+            </div>
+              
+
+          
+
+            
+      </div>
+    </li>
+    <% end %>
+  </ul>
+
+<div class='p-top__paginate'>
+  <%= paginate @fixes %>
+</div>
+
+<%= render "fixes/footer" %>

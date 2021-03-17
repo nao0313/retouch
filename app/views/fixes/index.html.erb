@@ -29,30 +29,46 @@
   <div class='retouch-contents'>
    <div class='reqest-title-all'>
     <h2 class='request-title'>修正依頼</h2>
-    <%= link_to '新規投稿', "#", class: "request-subtitle" %>
+    <%= link_to '新規投稿', new_fix_path, class: "request-subtitle" %>
    </div>
     <ul class='retouch-lists'>
+    <% @fixes.each do |fix| %>
       <li class='list'>
-        <%= image_tag "cat.jpg", class: "request-img" %>
+      <%= link_to fix_path(fix.id), method: :get do %>
+        <%= image_tag fix.image,class: :request_img, method: :get %>
         <div class='request-info'>
-          <h3 class='request-name'>
-            猫をかっこよくしたい
-          </h3>
-          <div class='request-junre'>
-            <span>イラスト・アート</span>
+          <div class='request-name'>
+          <div class='index-user-name'>
+            <%= fix.user.name %>
+          </div>
+          <%# <span class='index_fix_title_name'>タイトル :</span><br> %>
+            <div class='index_fix_title'>
+              
+              <%= link_to fix.title, fix_path(fix.id), class: :top_fix_title, method: :get %>
+            </div>
+          </div>
+
+          <div class='request-genre'>
+              <span class='index_fix_genre'>ジャンル :</span><%= fix.genre.name %>
           </div>
           <div class='request-detail'>
-            <p>リクエスト詳細</p>
+            <p>リクエスト詳細 :</p>
             <p class='request-detail-text'>
-              ここに説明を記入していきます。
-              どこを直して欲しいのかどんな感じに直して欲しいのかなど。
+              <div class='index_fix_comment'>
+                <%= fix.comment %>
+              </div>
             </P>
           </div>
         </div>
+        <% end %>
       </li>
+      <% end %>
     </ul>
   </div>
-  <%# /商品一覧 %>
+</div>
+
+<div class='p-top__paginate'>
+  <%= paginate @fixes %>
 </div>
 
 <%= render partial: "footer" %>

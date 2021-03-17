@@ -1,0 +1,99 @@
+.retouch-request-all{
+  padding-top: 10vh;
+  background-color: rgb(219, 219, 219);
+  padding-bottom: 10vh;
+}
+.retouch-request-brock{
+}
+.center {
+
+
+}
+.list-img {
+  text-align: center;
+}
+.request_list_img{
+  height: auto;
+  width: 80%;
+}
+.retouch-request-contents {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 255, 255);
+  width: 600px;
+}
+h1{
+  font-size: 18px;
+  font-weight: bold;
+}
+.retouch-request-user-name{
+  padding: 50px 50px 5px 50px;
+
+}
+.retouch-request-user-name a{
+  text-decoration: none;
+  color: black;
+}
+.retouch-request-user-name a:hover {
+  width: 30px;
+  padding: 5px 20px 5px 0px;
+  color: rgb(104, 103, 103);
+
+}
+.retouch-request-title {
+  padding: 0px 50px 0 50px;
+}
+.retouch-request-genre{
+  font-size: 14px;
+  padding:5px 50px 0 50px;
+  color: rgba(85, 85, 85, 0.8);
+}
+.retouch-request-comment{
+  font-size: 14px;
+  padding:5px 50px 50px 50px;
+  color: rgba(85, 85, 85, 0.8);
+}
+.request-room {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.request-room-btn a{
+  text-decoration: none;
+  font-size: 20px;
+  color: aliceblue;
+  background-color: rgb(94, 161, 248);
+  border-radius: 30px;
+  padding: 15px 30px;
+}
+.request-room-btn a:hover{
+  background-color: rgb(135, 184, 248);
+}
+
+@media (max-width: 599px){
+  .request_list_img{
+    width: 100%;
+  }
+  .retouch-request-contents {
+    width: 100%;
+    margin: 0;
+  }
+  .retouch-request-user-name{
+    padding: 30px 30px 0 30px;
+  }
+  .retouch-request-title{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 30px 0 30px;
+  }
+  .retouch-request-genre{
+    font-size: 15px;
+    padding:5px 30px 0 30px;
+    color: rgba(85, 85, 85, 0.8);
+  }
+  .retouch-request-comment{
+    font-size: 15px;
+    padding:5px 30px 30px 30px;
+    color: rgba(85, 85, 85, 0.8);
+  }
+}

@@ -1,0 +1,104 @@
+/* タイトル */
+.myreq-main-title{
+  text-align: center;
+  margin-top: 50px;
+  color: rgba(155, 155, 155, 0.8);
+}
+.myreq{
+  font-size: 30px;
+}
+
+/* リクエスト詳細 */
+.request-index-block{
+ width: 100vw;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.list-request {
+  background-color: rgb(235, 235, 235);
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 30px;
+  margin-left: 30px;
+  height: 330px;
+  width: 400px;
+  border-radius: 5px;
+}
+.myreq-side-block{
+display: flex;
+}
+.request-index-info{
+
+}
+
+.request-index-image{
+  height: 200px;
+  width: 200px;
+}
+.request_index_img {
+  height: 200px;
+  width: 200px;
+}
+
+
+/* 編集,削除ボタン */
+.myreq-btn{
+  text-align: center;
+}
+.myreq-edit a{
+  text-decoration: none;
+  color: aliceblue;
+}
+.myreq-edit-btn{
+  padding: 10px 50px;
+}
+.myreq-edit{
+background-color: rgb(94, 161, 248);
+margin:20px 40px;
+padding: 5px;
+border-radius: 5px;
+}
+.myreq-edit:hover{
+  background-color: rgb(135, 184, 248);
+}
+.myreq-destroy a{
+  text-decoration: none;
+  color: aliceblue;
+}
+.myreq-destroy-btn{
+  padding: 10px 30px;
+}
+.myreq-destroy{
+  background-color: rgb(139, 139, 139);
+  margin:10px 60px;
+  padding: 5px;
+  border-radius: 5px;
+  }
+  .myreq-destroy:hover{
+    background-color: rgb(190, 190, 190);
+  }
+/* サイドメニュー */
+.request-index-name{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.index_fix_title_name{
+
+width: 150px;
+}
+.request-index_fix_title{
+
+}
+.request-index-genre{
+  margin: 10px auto;
+}
+.request-index_fix_comment{
+  width: 150px;
+  height: 120px;
+  white-space: normal;
+  overflow: scroll;
+}
+
+
