@@ -1,0 +1,37 @@
+<%= render "shared/second-header"%>
+
+
+<% @fixes.each do |fix| %>
+<%# <% @user= fix.user%> %>
+<div class="request-index-block">
+      <li class='list-request'>
+      
+      <%# <%= link_to fix_path(fix.id), method: :get do %> 
+        <%= image_tag fix.image,class: :request_index_img, method: :get %>
+        <div class='request-index-info'>
+          <div class='request-index-name'>
+          <div class='index-index-user-name'>
+            <%= fix.user.name %>
+          </div>
+          <%# <span class='index_fix_title_name'>タイトル :</span><br> %>
+            <div class='request-index_fix_title'>
+              
+              <%= link_to fix.title, fix_path(fix.id), class: :top_fix_title, method: :get %>
+            </div>
+          </div>
+
+          <div class='request-index-genre'>
+              <span class='request-index_fix_genre'>ジャンル :</span><%= fix.genre.name %>
+          </div>
+          <div class='request-index-detail'>
+            <p>リクエスト詳細 :</p>
+            <p class='request-index-detail-text'>
+              <div class='request-index_fix_comment'>
+                <%= fix.comment %>
+              </div>
+            </P>
+          </div>
+        </div>
+        <% end %>
+        </div>
+      </li>
