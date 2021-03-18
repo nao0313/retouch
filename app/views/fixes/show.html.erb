@@ -40,7 +40,7 @@
             </div>
           <% end %>
 
-        <% @messages.each do |message| %>
+          <% @messages.each do |message| %>
           <div class="upper-message">
             <div class="message-user">
             <%= message.user.name%>
@@ -54,25 +54,19 @@
               <div class="message-content">
                 <%= message.comment %>
               </div>
-            </div>
-          </div>
-        <% end %>
 
-          <div class="upper-message">
-            <div class="message-user">
-            ともきち
-            </div>
-            <div class="message-date">
-              3/26 12:34
-            </div>
-          </div>
-          <div class="lower-message">
-            <div class="message-back-color">
-              <div class="message-content">
-                こんにちは、こんばんは、また明日、お元気ですか。また遊びましょう
+              <div class="image-message">
+              <%= image_tag message.avatar, class: 'message-image' if message.avatar.attached? %>
               </div>
+              
             </div>
           </div>
+
+              
+            
+          <% end %>
+        </div>
+      </div>
 
           
 
@@ -92,7 +86,7 @@
           <div class="form">
             <label class="form-image">
               <span class="image-file">画像</span>
-              <%= f.file_field :image, class: 'hidden' %>
+              <%= f.file_field :avatar, class: 'hidden' %>
             </label>
             <div class="form-input">
               <%= f.text_field :comment, class: 'form-message', placeholder: '' %>
