@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :name, presence: true,length: { maximum: 12 }
 
   has_many :fixes
+  has_many :messages
 end
