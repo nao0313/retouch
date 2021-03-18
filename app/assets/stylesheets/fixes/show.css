@@ -20,7 +20,8 @@
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(255, 255, 255);
-  width: 600px;
+  width: 70%;
+  border-radius: 10px 10px 0 0 ;
 }
 h1{
   font-size: 18px;
@@ -53,7 +54,7 @@ h1{
   padding:5px 50px 50px 50px;
   color: rgba(85, 85, 85, 0.8);
 }
-.request-room {
+/* .request-room {
   text-align: center;
   margin-top: 50px;
 }
@@ -68,8 +69,143 @@ h1{
 }
 .request-room-btn a:hover{
   background-color: rgb(135, 184, 248);
+} */
+
+
+
+/* ここからメッセージ部分 */
+.messages{
+
+}
+.message{
+  background-color: rgb(134, 227, 255);
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: scroll;
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+}
+.title{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+  background-color: rgb(244, 244, 250);
+}
+.upper-message{
+  margin-top: 20px;
+  display: flex;
+  align-items: baseline;
+}
+.message-user {
+  color: #434a54;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.message-date {
+  color: #999;
+  font-size: 12px;
+  padding-left: 10px;
 }
 
+.message-back-color{
+  background-color: #b1ffd2da;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-bottom: solid 1px rgb(192, 192, 192) ;
+}
+
+/* フォーム部分 */
+
+.form {
+  background-color: rgb(166, 179, 255);
+  height: 90px;
+  width: 70%;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 40px;
+  display: flex;
+}
+
+/* 画像ボタン */
+.form-image {
+  font-size: 16px;
+  background-color: rgb(69, 194, 110);
+  color: white;
+  padding-top:15px ;
+  width: 100px;
+  height: 50px;
+  margin: auto 15px;
+  text-align: center;
+}
+.form-image:hover{
+  background-color: rgb(183, 252, 206);
+}
+.hidden {
+  display: none;
+}
+
+/* コメントフォーム */
+.form-input {
+  background-color: white;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.form-message {
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 30px;
+}
+
+.form-submit {
+  background-color: #38AEF0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+.form-submit:hover {
+  background-color: #92d4fa;
+}
+
+/* 吹き出し部分 */
+
+/* .message-content{
+  position: relative;
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #555;
+  box-sizing: border-box;
+    border-radius: 10px;
+}
+.message-content:before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 10px;
+  border: 12px solid transparent;
+  border-bottom: 12px solid #FFF;
+  z-index: 2;
+
+}
+.message-content p {
+  margin: 0;
+  padding: 0;
+} */
 @media (max-width: 599px){
   .request_list_img{
     width: 100%;
@@ -95,5 +231,24 @@ h1{
     font-size: 15px;
     padding:5px 30px 30px 30px;
     color: rgba(85, 85, 85, 0.8);
+  }
+  .message-block{
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 900px){
+  .message-block{
+    width: 700px;
+  }
+  .retouch-request-contents{
+    width: 700px;
+  }
+  .message{
+    width: 700px;
+  }
+  .form {
+    width: 600px;
   }
 }
