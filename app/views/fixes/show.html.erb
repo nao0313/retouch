@@ -83,7 +83,7 @@
     <% if user_signed_in? %>
       <%= form_with model: [@fixes, @message], local: true do |f| %>
         </div>
-          <div class="form">
+          <div class="form-request-comment">
             <label class="form-image">
               <span class="image-file">画像</span>
               <%= f.file_field :avatar, class: 'hidden' %>
