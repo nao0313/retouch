@@ -28,31 +28,35 @@
     </li>
 
       <%# ここからメッセージ入力欄 %>
+      
       <div class="messages">
         <div class="message">
           <div class="title">
             修正コメント
           </div>
+          <% unless @fixes.messages.present?%>
+            <div class="comment-none">
+              まだコメントはありません
+            </div>
+          <% end %>
 
-          <div class="comment-none">
-            まだコメントはありません
-          </div>
-          
+        <% @messages.each do |message| %>
           <div class="upper-message">
             <div class="message-user">
-            ともきち
+            <%= message.user.name%>
             </div>
             <div class="message-date">
-              3/26 12:34
+              <%= message.created_at %>
             </div>
           </div>
           <div class="lower-message">
             <div class="message-back-color">
               <div class="message-content">
-                こんにちは、こんばんは、また明日、お元気ですか。また遊びましょう
+                <%= message.comment %>
               </div>
             </div>
           </div>
+        <% end %>
 
           <div class="upper-message">
             <div class="message-user">
