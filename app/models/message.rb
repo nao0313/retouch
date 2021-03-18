@@ -8,3 +8,4 @@ class Message < ApplicationRecord
     validates :user_id
     validates :fix_id
   end
+end
