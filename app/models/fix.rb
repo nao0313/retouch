@@ -13,8 +13,4 @@ class Fix < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
 
-
-  def user
-    return User.find_by(id: self.user_id)
-  end
 end
