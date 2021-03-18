@@ -82,24 +82,22 @@
 
 
 
-
-
+    <% if user_signed_in? %>
+      <%= form_with model: [@fixes, @message], local: true do |f| %>
         </div>
-
           <div class="form">
             <label class="form-image">
               <span class="image-file">画像</span>
-              <input type="file" class="hidden">
+              <%= f.file_field :image, class: 'hidden' %>
             </label>
             <div class="form-input">
-              <input class="form-message" placeholder= "">
+              <%= f.text_field :comment, class: 'form-message', placeholder: '' %>
             </div>
-            <input class="form-submit" type="submit" value="送信">
+            <%= f.submit '送信', class: 'form-submit' %>
           </div>
-      
-      </div>
-
-
+        </div>
+      <% end %>
+    <% end %>
 
 
 

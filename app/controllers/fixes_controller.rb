@@ -20,6 +20,8 @@ class FixesController < ApplicationController
   
   def show
     @fixes = Fix.find(params[:id])
+    @message = Message.new
+    @messages = @fixes.messages.includes(:user)
   end
 
   def edit
