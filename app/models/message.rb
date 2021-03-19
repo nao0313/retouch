@@ -9,8 +9,17 @@ class Message < ApplicationRecord
     validates :fix_id
   end
 
+  validate if: :image do
+    if avatar.respond_to?(:content_type)
+      unless avatar.content_type.in?(ALLOWED_CONTENT_TYPES)
+        errors.add(:avatar, :invalid_avatar_type)
+      end
+    else
+      errors.add(:avatar, :invalid)
+    end
+  end
+
   def was_attached?
     self.avatar.attached?
   end
-
 end
