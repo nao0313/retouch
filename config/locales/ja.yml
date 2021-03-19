@@ -14,3 +14,13 @@ ja:
       messages:
 
         invalid_image_type: にはJPEG、PNG、GIF、BMP形式の画像を指定してください。
+
+  activerecord:
+    attributes:
+      fix:
+        title: タイトル
+        comment: コメント
+        image: 画像
+        genre_id: ジャンル
+      user:
+        name: 名前

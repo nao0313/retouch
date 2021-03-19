@@ -5,9 +5,9 @@
     
     <%= form_with model: @fixes, local: true do |f| %>
 
- 
-    <%# <%= render partial: 'shared/error_messages', locals: { model: f.object } %>
-
+     <div class="errors-messages-new">
+    <%= render partial: 'shared/error_messages', locals: { model: f.object } %>
+      </div>
 
 
     <div class="img-upload">

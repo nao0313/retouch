@@ -212,6 +212,13 @@ h1{
   margin: 0;
   padding: 0;
 } */
+
+.errors-messages{
+  text-align: center;
+  font-size: 8px;
+  margin-top: 20px;
+  color: rgb(255, 116, 144);
+}
 @media (max-width: 599px){
   .request_list_img{
     width: 100%;

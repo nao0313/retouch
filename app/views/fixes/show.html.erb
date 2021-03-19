@@ -40,7 +40,14 @@
             </div>
           <% end %>
 
+          
+
           <% @messages.each do |message| %>
+
+          <%# <div class=errors-messages>
+            <%= render partial: 'shared/error_messages', locals: { model: message.object } %>
+          <%# </div> %> 
+
           <div class="upper-message">
             <div class="message-user">
             <%= message.user.name%>
