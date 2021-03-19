@@ -22,7 +22,7 @@
                 <%= link_to "編 集", edit_fix_path(fix.id), class: "myreq-edit-btn" %>
               </div>
               <div class="myreq-destroy">
-                <%= link_to "削 除",fix_path(fix.id), class: "myreq-destroy-btn", method: :delete %>
+                <%= link_to "削 除",fix_path(fix.id),data: { confirm: '本当に削除しますか？' }, class: "myreq-destroy-btn", method: :delete %>
               </div>
             </div>
           </div>
