@@ -159,7 +159,7 @@ h1{
 /* 画像ボタン */
 .form-image {
   background: url("../img2.jpeg")center center no-repeat ;
-  background-size: 80%;
+  background-size: 60%;
   color: white;
   padding-top:15px ;
   width: 100px;
@@ -171,7 +171,7 @@ h1{
 }
 .form-image:hover{
   background: url("../img.jpeg")center center no-repeat ;
-  background-size: 80%;
+  background-size: 60%;
 }
 .hidden {
   display: none;
