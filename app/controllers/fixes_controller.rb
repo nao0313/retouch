@@ -2,7 +2,7 @@ class FixesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit]
 
   def index
-    @fixes = Fix.all.order("created_at DESC").page(params[:page]).per(8)
+    @fixes = Fix.all.order("created_at DESC").page(params[:page]).per(20)
   end
   
   def new

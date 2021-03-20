@@ -10,9 +10,9 @@ ja:
   time:
     formats:
       default: "%m/%d %H:%M"
+
   errors:
       messages:
-
         invalid_image_type: にはJPEG、PNG、GIF、BMP形式の画像を指定してください。
 
   activerecord:
