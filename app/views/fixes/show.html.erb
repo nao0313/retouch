@@ -48,9 +48,14 @@
             <%= render partial: 'shared/error_messages', locals: { model: message.object } %>
           <%# </div> %> 
 
+          
+
+
+
+
           <div class="upper-message">
             <div class="message-user">
-            <%= message.user.name%>
+              <%= message.user.name%>
             </div>
             <div class="message-date">
               <%= l message.created_at %>
@@ -61,16 +66,11 @@
               <div class="message-content">
                 <%= message.comment %>
               </div>
-
               <div class="image-message">
-
               <%= image_tag message.avatar, class: 'message-image' if message.avatar.attached? %>
-  
               </div>
-              
             </div>
           </div>
-
               
             
           <% end %>
