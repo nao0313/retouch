@@ -12,6 +12,7 @@
 }
 .top-image{
   height: 8vh;
+  margin-right: -10px;
 }
 .subtitle{
   margin:0 0 0 10px;
@@ -49,8 +50,8 @@
 .lists-right {
   display: flex;
   justify-content: center;
-  margin: 40px 100px;
-  font-size: 23px;
+  margin: 50px 100px;
+  font-size: 25px;
 }
 
 .lists-right a {

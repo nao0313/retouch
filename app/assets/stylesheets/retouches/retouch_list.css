@@ -60,7 +60,7 @@
   align-items: baseline;
 }
 
-.index-user-name {
+.index-user-name a{
  color: rgb(180, 180, 180);
  font-size: 18px;
  padding: 0 0 3px 3px;
