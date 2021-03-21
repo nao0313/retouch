@@ -70,7 +70,7 @@
             </div>
           <% if current_user.id == message.user_id %>
             <div class="retouch-delete-btn">
-              <%= link_to "削 除",fix_message_path(message.id), data: { confirm: '本当に削除しますか？' }, class: "myreq-destroy-btn", method: :delete %>
+              <%= link_to "削 除",fix_message_path(message.id,@fixes.id), data: { confirm: '本当に削除しますか？' }, class: "myreq-destroy-btn", method: :delete %>
             </div>
           <% end %>
           </div>

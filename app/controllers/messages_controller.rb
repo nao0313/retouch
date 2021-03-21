@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
     else
       @fixes = @message.fix
       @messages = @fixes.messages
-      render "fixes/show"
+      redirect_to fix_path(@message.fix)
     end
   end
 
