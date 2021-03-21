@@ -11,6 +11,11 @@ class MessagesController < ApplicationController
     end
   end
 
+  def destroy
+    @message = Message.find(params[:fix_id])
+    redirect_to fix_path(@message.fix) if @message.destroy
+  end
+
   private
 
   def message_params

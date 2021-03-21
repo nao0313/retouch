@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'fixes#index'
 
   resources :fixes do
-    resources :messages, only: [:create]
+    resources :messages, only: [:create, :destroy]
   end
   resources :users, only: [:show]
 end

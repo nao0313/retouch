@@ -52,7 +52,7 @@
 
 
 
-
+          
           <div class="upper-message">
             <div class="message-user">
               <%= message.user.name%>
@@ -60,7 +60,14 @@
             <div class="message-date">
               <%= l message.created_at %>
             </div>
+          <% if current_user.id == message.user_id %>
+            <div class="retouch-delete-btn">
+              <%= link_to "削 除",fix_message_path(message.id), data: { confirm: '本当に削除しますか？' }, class: "myreq-destroy-btn", method: :delete %>
+            </div>
+          <% end %>
           </div>
+          
+          
           <div class="lower-message">
             <div class="message-back-color">
               <div class="message-content">

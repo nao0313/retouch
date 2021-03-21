@@ -110,7 +110,9 @@ h1{
   font-size: 12px;
   padding-left: 10px;
 }
-
+.retouch-delete-btn{
+  margin-left: auto;
+}
 .message-back-color{
   background-color: rgb(250, 250, 250);
   margin-top: 10px;
