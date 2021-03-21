@@ -10,9 +10,13 @@
     <div class="list-img">
       <%= image_tag @fixes.image,class: :request_list_img %>
     </div>
+
       <div class="retouch-request-contents">
         <h1 class="retouch-request-user-name">
           <%= link_to @fixes.user.name%>
+           <div class="message-date">
+            <%= l @fixes.created_at %>
+          </div>
         </h1>
         <h1 class="retouch-request-title">
           <%= @fixes.title %>
@@ -24,7 +28,11 @@
         <h2 class="retouch-request-comment">
           リクエスト詳細:<br>
           <%= @fixes.comment %>
+        </h2>
       </div>
+
+
+      
     </li>
 
       <%# ここからメッセージ入力欄 %>
