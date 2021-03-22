@@ -31,7 +31,9 @@
 .list a {
   text-decoration: none;
 }
+.sid{
 
+}
 .request_img {
   object-fit: cover;
   width: 30vh;
@@ -113,6 +115,9 @@
 }
 
 @media (max-width: 599px){
+  .request_img {
+
+  }
   .retouch-lists{
     width: 100%;
   }
