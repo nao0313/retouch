@@ -6,3 +6,21 @@ ja:
       previous: <i class="fas fa-angle-left"></i>
       next: <i class="fas fa-angle-right"></i>
       truncate: "..."
+
+  time:
+    formats:
+      default: "%m/%d %H:%M"
+
+  errors:
+      messages:
+        invalid_image_type: にはJPEG、PNG、GIF、BMP形式の画像を指定してください。
+
+  activerecord:
+    attributes:
+      fix:
+        title: タイトル
+        comment: コメント
+        image: 画像
+        genre_id: ジャンル
+      user:
+        name: 名前
