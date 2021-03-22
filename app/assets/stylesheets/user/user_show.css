@@ -1,4 +1,4 @@
-/* タイトル */
+
 .myreq-main-title{
   text-align: center;
   margin-top: 50px;
@@ -8,7 +8,7 @@
   font-size: 30px;
 }
 
-/* リクエスト詳細 */
+/* 
 .request-index-block{
  width: 100vw;
  display: flex;
@@ -43,7 +43,7 @@ display: flex;
 }
 
 
-/* 編集,削除ボタン */
+
 .myreq-btn{
   text-align: center;
 }
@@ -79,7 +79,7 @@ border-radius: 5px;
   .myreq-destroy:hover{
     background-color: rgb(190, 190, 190);
   }
-/* サイドメニュー */
+
 .request-index-name{
   margin-top: 10px;
   margin-left: 10px;
@@ -99,6 +99,189 @@ width: 150px;
   height: 120px;
   white-space: normal;
   overflow: scroll;
+} */
+
+.myreq-side-block{
+  background-color: rgb(245, 245, 245);
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 230px;
+}
+.request-index-info{
+  display: flex;
+}
+.request-index-image{
+  margin: 15px 15px ;
+}
+.request_index_img{
+  height: 200px;
+  width: 200px;
+}
+.request-index-name{
+  display: flex;
+}
+.index_fix_title_name{
+  width: 100px;
+  height: 200px;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  overflow: scroll;
+}
+.request-index_fix_title{
+  line-height: 1.2;
+}
+.request-index_fix_title a{
+  text-decoration: none;
+}
+.myreq-title{
+  font-size: 13px;
+  color: rgb(151, 151, 151);
+  margin-top: 3px;
+  margin-bottom: 6px;
+}
+.top_fix_title{
+  font-size: 14px;
+  color: rgb(65, 65, 65);
+}
+.request-index_fix_genre{
+  margin-top: 10px;
+  font-size: 13px;
+  color: rgb(151, 151, 151);
+}
+.myreq-genre{
+  font-size: 14px;
+}
+.request-index-detail{
+  display: flex;
+}
+.request-index_fix_comment{
+  width: calc(60vw - 200px - 100px);
+  height: 170px;
+  margin-left: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  overflow: scroll;
+}
+.request-index-comment{
+  font-size: 13px;
+  color: rgb(151, 151, 151);
+  margin-bottom: 3px;
+}
+.myreq-comment{
+  font-size: 14px;
+  color: rgb(65, 65, 65);
+}
+.myreq-btn{
+  text-align: center;
+  width: 100px;
+  height: 170px;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.myreq-btn a{
+  text-decoration: none;
+}
+.myreq-edit{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.myreq-edit-btn{
+  color: rgb(116, 192, 255);
+}
+.myreq-edit-btn:hover{
+  color: rgb(152, 209, 255);
+}
+.myreq-destroy-btn{
+  color: rgb(255, 139, 139);
+}
+.myreq-destroy-btn:hover{
+  color: rgb(252, 166, 166);
+}
+@media (max-width: 1024px){
+  .myreq-side-block{
+    width: 90vw;
+    height: 200px;
+  }
+  .request-index-image{
+    margin: 0 ;
+  }
+  .request_index_img{
+    height: 200px;
+    width: 200px;
+  }
+  .index_fix_title_name{
+    width: 100px;
+    height: 170px;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    overflow: scroll;
+  }
+  .request-index_fix_comment{
+    width: calc(60vw - 100px - 100px);
+    height: 170px;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .myreq-btn{
+    width: 100px;
+    height: 170px;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .myreq-edit{
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
 }
 
+@media (max-width: 699px){
+  .myreq-side-block{
+    width: 100vw;
+    height: 200px;
+  }
+  .request_index_img{
+    height: 200px;
+    width: 200px;
+  }
+  .index_fix_title_name{
+    font-size: 13px;
+    width: 80%;
+    height: 170px;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
+  }
+  .request-index_fix_comment{
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .myreq-btn{
+    width: 100px;
+    margin-left: -12px;
+    margin-top: -70px;
+    margin-bottom: 15px;
+  }
+  .myreq-edit{
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .request-index-name{
+    display: block;
+  }
+  .request-index-detail{
+    display: block;
+  }
+  
+}

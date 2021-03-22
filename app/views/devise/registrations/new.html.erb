@@ -6,6 +6,9 @@
     <h2>新規ユーザー登録</h2>
   </div>
 
+  <div class="errors-messages">
+<%= render partial: 'shared/error_messages', locals: { model: f.object } %>
+  </div>
 <div class="registration-form-all">
   <div class="registration-form-block">
     <h2 class="registration-view-sign-up">情報を入力してください</h2>

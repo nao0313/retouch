@@ -43,7 +43,7 @@
 - belongs_to :fix
 - has_many   :room_users
 - has_many   :user, through: room_users
-- has_many   :message
+- has_many   :messages
 
 ## room_users テーブル
 
@@ -61,7 +61,7 @@
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| comment | string     |                                |
+| comment | text     |                                |
 | room    | references | null: false, foreign_key: true |
 | user    | references | null: false, foreign_key: true |
 

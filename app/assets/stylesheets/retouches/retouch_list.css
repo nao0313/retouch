@@ -1,10 +1,12 @@
-.reqest-title-all{
-  text-align: center;
-  margin: 70px 0;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-}
+
 .request-title{
-  font-size: 30px;
+  width: 85%;
+  padding-left: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+  margin-bottom: 15px;
+  font-size: 20px;
   color: #444444;
  
 }
@@ -14,9 +16,28 @@
 }
 
 
+/* リスト部分 */
+.retouch-lists{
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+.list {
+  margin-left: auto;
+  margin-right: auto;
+}
+.list a {
+  text-decoration: none;
+}
+.sid{
+
+}
 .request_img {
-  width: 33vh;
-  height: 33vh;
+  object-fit: cover;
+  width: 30vh;
+  height: 30vh;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -26,34 +47,30 @@
 .request_img:hover{
   opacity: 0.9;
 }
-.retouch-lists{
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.list {
-  margin: 30px;
-  display: flex;
-  justify-content: space-around;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  height: 33vh;
-}
-.list a {
-  text-decoration: none;
-}
+
 .request-info{
   /* background-color: rgb(241, 241, 241); */
-  width: 250px;
+  width: 210px;
   padding: 0 0 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
 }
-.request-name {
-  font-size: 18px;
-  padding: 0 0 3px 3px;
-  border-bottom: solid 2px rgb(191, 221, 255);
+.request-name-date{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
-.index-user-name {
- color: black;
+
+.index-user-name a{
+ color: rgb(180, 180, 180);
+ font-size: 18px;
+ padding: 0 0 3px 3px;
+}
+
+.request-date{
+  font-size: 10px;
+  color: #a7a7a7;
 }
 .index_fix_title{
   white-space: normal;
@@ -69,33 +86,9 @@
   font-weight: bold;
   color: black;
 } */
-.request-genre {
-  text-decoration: none;
-  font-size: 15px;
-  padding: 5px 0 3px 0;
-  border-bottom: solid 2px rgb(191, 221, 255);
-}
-.request-detail{
-  font-size: 15px;
-  padding: 0 10px 3px;
-  margin-top: 5px;
-}
-.request-detail-text a{
-  text-decoration: none;
-  font-size: 13px;
-  overflow: scroll;
-}
-.index_fix_genre {
-  font-weight: bold;
-  margin: 0 10px;
-  color: rgb(0, 0, 0);
-}
-.index_fix_comment {
-  color: rgb(128, 128, 128);
-  height: 14vh;
-  white-space: normal;
-  overflow: scroll;
-} 
+
+
+/* ここからページネイション */
 .p-top__paginate {
   text-align: center;
   font-size: 20px;
@@ -119,4 +112,13 @@
 }
 .p-top__paginate a:hover{
   color: black;
+}
+
+@media (max-width: 599px){
+  .request_img {
+
+  }
+  .retouch-lists{
+    width: 100%;
+  }
 }

@@ -7,7 +7,9 @@
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 } */
 
+.main{
 
+}
 
 .service {
   padding-bottom: 5px;
@@ -26,8 +28,9 @@
   font-size: 8vh;
   color: rgb(255, 255, 255);
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-  
+  letter-spacing: 13px;
 }
+
 .service-explain {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 15px;

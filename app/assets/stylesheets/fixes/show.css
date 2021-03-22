@@ -20,13 +20,17 @@
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(255, 255, 255);
-  width: 600px;
+  width: 70%;
+  border-radius: 10px 10px 0 0 ;
 }
 h1{
   font-size: 18px;
   font-weight: bold;
 }
 .retouch-request-user-name{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   padding: 50px 50px 5px 50px;
 
 }
@@ -48,12 +52,15 @@ h1{
   padding:5px 50px 0 50px;
   color: rgba(85, 85, 85, 0.8);
 }
+
 .retouch-request-comment{
+  margin-top: 10px;
   font-size: 14px;
   padding:5px 50px 50px 50px;
   color: rgba(85, 85, 85, 0.8);
 }
-.request-room {
+
+/* .request-room {
   text-align: center;
   margin-top: 50px;
 }
@@ -68,8 +75,176 @@ h1{
 }
 .request-room-btn a:hover{
   background-color: rgb(135, 184, 248);
+} */
+
+
+
+/* ここからメッセージ部分 */
+.messages{
+
+}
+.message{
+  background-color: rgb(250, 250, 250);
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: scroll;
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+}
+.title{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+  background-color: rgb(250, 250, 250);
+}
+.comment-none{
+  text-align: center;
+}
+.upper-message{
+  margin-top: 60px;
+  display: flex;
+  align-items: baseline;
+}
+.message-user {
+  color: #434a54;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.message-date {
+  color: #999;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.retouch-delete-btn {
+  margin-left: auto;
+  height: 20px;
+}
+.retouch-delete-btn a{
+  text-decoration: none;
+  font-size: 13px;
+  color: #999;
+}
+.retouch-delete-btn a:hover{
+  color: rgb(255, 145, 145);
+}
+.message-back-color{
+  background-color: rgb(250, 250, 250);
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-bottom: solid 1px rgb(192, 192, 192) ;
+}
+.image-message{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.message-image{
+  width: 80%;
 }
 
+/* フォーム部分 */
+
+.form-request-comment {
+  background-color: rgb(219, 219, 219);
+  height: 90px;
+  width: 80%;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 40px;
+  display: flex;
+}
+
+/* コメントフォーム */
+.form-input {
+  background-color: white;
+  width: 100%;
+  border-radius: 30px ;
+  display: flex;
+}
+
+.form-message {
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 30px 0px 0px 30px;
+}
+/* 画像ボタン */
+.form-image {
+  background: url("../img2.jpeg")center center no-repeat ;
+  background-size: 60%;
+  color: white;
+  padding-top:15px ;
+  width: 100px;
+  height: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 15px;
+  text-align: center;
+}
+.form-image:hover{
+  background: url("../img.jpeg")center center no-repeat ;
+  background-size: 60%;
+}
+.hidden {
+  display: none;
+}
+/* 送信ボタン */
+.form-submit {
+  background-color: #38AEF0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+  border-radius: 30px;
+}
+.form-submit:hover {
+  background-color: #92d4fa;
+}
+
+/* 吹き出し部分 */
+
+/* .message-content{
+  position: relative;
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #555;
+  box-sizing: border-box;
+    border-radius: 10px;
+}
+.message-content:before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 10px;
+  border: 12px solid transparent;
+  border-bottom: 12px solid #FFF;
+  z-index: 2;
+
+}
+.message-content p {
+  margin: 0;
+  padding: 0;
+} */
+
+.errors-messages{
+  text-align: center;
+  font-size: 8px;
+  margin-top: 20px;
+  color: rgb(255, 116, 144);
+}
 @media (max-width: 599px){
   .request_list_img{
     width: 100%;
@@ -95,5 +270,101 @@ h1{
     font-size: 15px;
     padding:5px 30px 30px 30px;
     color: rgba(85, 85, 85, 0.8);
+  }
+  .message-block{
+    width: 100%;
+    margin: 0;
+  }
+
+  .message{
+    width: 100%;
+  }
+  .form-request-comment {
+    width: 100%;
+  }
+  .message-image{
+    width: 100%;
+  }
+  
+  /* コメントフォーム */
+.form-input {
+  width: 100%;
+  height: 40px;
+}
+
+.form-message {
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 100%;
+  margin-left: -20px;
+  margin-right: 40px;
+  padding-left: 20px;
+  padding-right: 70px;
+  border-radius: 30px 0px 0px 30px;
+}
+  .form-image {
+    background: url("../img2.jpeg")center center no-repeat ;
+    background-size: 55%;
+    color: white;
+    padding-top:15px ;
+    width: 100px;
+    height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 15px;
+    text-align: center;
+  }
+  .form-image:hover{
+    background: url("../img.jpeg")center center no-repeat ;
+    background-size: 55%;
+  }
+  .hidden {
+    display: none;
+  }
+  /* 送信ボタン */
+  .form-submit {
+    text-align: center;
+    background-color: #38AEF0;
+    border: none;
+    color: white;
+    font-size: 13px;
+    width: 20px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 15px;
+    padding-top: 3px;
+    padding-right: 40px;
+    padding-left: 15px;
+    border-radius: 30px;
+  }
+  .form-submit:hover {
+    background-color: #92d4fa;
+  }
+}
+
+@media (min-width: 900px){
+  .message-block{
+    width: 700px;
+  }
+  .retouch-request-contents{
+    width: 700px;
+  }
+  .message{
+    width: 700px;
+  }
+  .form {
+    width: 600px;
+  }
+  /* .form-input {
+   width: 500px;
+    margin-left: 180px;
+  } */
+  .form-request-comment{
+    width: 700px;
+  }
+  .request_list_img{
+    height: auto;
+    width: 800px;
   }
 }

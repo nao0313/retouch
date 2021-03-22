@@ -1,4 +1,4 @@
-class CreateFixes < ActiveRecord::Migration[6.0]
+ class CreateFixes < ActiveRecord::Migration[6.0]
   def change
     create_table :fixes do |t|
       t.string     :title,    null: false
