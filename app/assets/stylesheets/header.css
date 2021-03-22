@@ -1,7 +1,7 @@
 .app-name {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: baseline;
   max-width: 1100px;
   margin: 0 auto;
   padding: 4% 4% 1% 4%;
