@@ -31,7 +31,7 @@ class FixesController < ApplicationController
   def update
     @fixes = Fix.find(params[:id])
     if @fixes.update(fixes_params)
-      redirect_to user_path
+      redirect_to user_path(@fixes.user)
     else
       render :edit
     end

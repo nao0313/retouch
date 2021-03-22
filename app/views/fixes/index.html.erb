@@ -24,9 +24,11 @@
 
   <div class='nav'>
     <div class='lists-right'>
+      <% if user_signed_in? %>
         <%= link_to 'PROFILE', "#", class: "profile" %>  
         <%= link_to 'REQUEST', new_fix_path,  class: "request" %>
-        <%# <li><%= link_to 'MY REQ', user_path( @fixes.ids), method: :get, class: "my-req" %>
+        <%= link_to 'MY REQ', user_path(current_user), method: :get, class: "my-req" %>
+      <% end %>
     </div>
   </div>
 </header>
