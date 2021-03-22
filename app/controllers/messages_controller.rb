@@ -7,13 +7,13 @@ class MessagesController < ApplicationController
     else
       @fixes = @message.fix
       @messages = @fixes.messages
-      render "fixes/show"
+      redirect_to fix_path(@message.fix)
     end
   end
 
   def destroy
     @message = Message.find(params[:fix_id])
-    redirect_to "fixes/show" if @message.destroy
+    redirect_to fix_path(@message.fix) if @message.destroy
   end
 
   private
