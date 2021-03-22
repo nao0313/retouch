@@ -62,8 +62,6 @@
 }
 .lists-right a:hover {
   color: rgb(104, 103, 103);
-  border-bottom: solid 3px rgb(104, 103, 103);
-  padding-bottom: 5px;
 }
 
   /* スマホ表示時 */

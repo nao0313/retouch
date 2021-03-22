@@ -16,9 +16,12 @@
   background: url("./top.jpg") center center no-repeat;
   background-color:rgba(155, 155, 155, 0.8);
   background-blend-mode:lighten;
-  background-size: 100%, 80%;
+  background-size: 100%, 100%;
+  width: 80%;
   padding: 3vh ;
-  margin: 0 100px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .service {
   text-align: center;
@@ -43,7 +46,8 @@
   .service{
     background-size: 100%, 100%;
     padding: 0;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   .service-title {
     font-size: 5vh;
@@ -51,4 +55,5 @@
   .service-explain {
     font-size: 12px;
   }
+
 }

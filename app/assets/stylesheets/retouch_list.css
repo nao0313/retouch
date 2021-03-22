@@ -31,13 +31,10 @@
 .list a {
   text-decoration: none;
 }
-.sid{
-
-}
 .request_img {
   object-fit: cover;
-  width: 30vh;
-  height: 30vh;
+  width: 220px;
+  height: 220px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -115,8 +112,16 @@
 }
 
 @media (max-width: 599px){
+  .request-info{
+    width: 150px;
+    padding: 0 0 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  }
   .request_img {
-
+  width: 150px;
+  height: 150px;
   }
   .retouch-lists{
     width: 100%;
