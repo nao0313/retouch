@@ -1,8 +1,9 @@
 class Fix < ApplicationRecord
+
   belongs_to :user
   has_one_attached :image
-  attribute :new_image
   has_many :messages, dependent: :destroy
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
 
