@@ -23,7 +23,9 @@ https://illustratum.herokuapp.com/
 
 ## トップページ
 
-https://i.gyazo.com/ff6370d01a9b81ef574e7d6ac428ac1c.jpg
+
+## 投稿詳細ページ
+https://user-images.githubusercontent.com/78333344/112331618-6b9c8880-8cfc-11eb-9e0f-b6099bd788b7.mp4
 
 ## 今後の実装機能
 
