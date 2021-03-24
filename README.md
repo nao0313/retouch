@@ -26,7 +26,7 @@ https://illustratum.herokuapp.com/
 
 ## 投稿詳細ページ
 
-![result](https://user-images.githubusercontent.com/78333344/112333765-38f38f80-8cfe-11eb-8018-f13c7a0371ab.mp4)
+![gif-1](https://user-images.githubusercontent.com/78333344/112333765-38f38f80-8cfe-11eb-8018-f13c7a0371ab.mp4)
 
 
 ## 投稿一覧ページ
