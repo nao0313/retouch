@@ -3,13 +3,11 @@
 }
 
 .service-image {
-  padding-bottom: 5px;
   background: url("./top2.jpg") center center no-repeat;
   background-color:rgba(221, 172, 172, 0.8);
   background-blend-mode:lighten;
   background-size: 100%, 80%;
   width: 100%;
-  padding: 3vh ;
   margin-left: auto;
   margin-right: auto;
   border-bottom: black solid 1px;
