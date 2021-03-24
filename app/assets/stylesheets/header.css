@@ -1,14 +1,19 @@
+.top-lin{
+  height: 70px;
+}
 .app-name {
+  background-color: rgb(37, 37, 37);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  max-width: 1100px;
   margin: 0 auto;
-  padding: 4% 4% 1% 4%;
+  padding: 0 10% 0 10%;
 }
 .top-rogo{
   display: flex;
   align-items: flex-end;
+  max-width: 1100px;
+  padding-top: 5px;
 }
 .top-image{
   height: 8vh;
@@ -16,8 +21,8 @@
 }
 .subtitle{
   margin:0 0 0 10px;
-  color: #777777;
-  font-size: 13px;
+  color: #949494;
+  font-size: 16px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 .retouch-request a {
@@ -27,22 +32,31 @@
 .lists-top-right{
   display: flex;
   font-size: 18px;
+  align-items: baseline;
 }
 .lists-top-right a{
   text-decoration: none;
   color: #b1b1b1;
   margin: 0 10px;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 .lists-top-right a:hover{
+  text-decoration: none;
   color: rgb(104, 103, 103);
+  margin: 0 10px;
 }
-.line {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 4%;
-  border-top: solid 1px rgb(218, 217, 217);
+/* .nickname{
+  font-size: 23px;
 }
+.logout{
+  font-size: 23px;
+}
+.login{
+  font-size: 23px;
+}
+.sign-up{
+  font-size: 23px;
+} */
+
 
 
 
@@ -50,41 +64,49 @@
 .lists-right {
   display: flex;
   justify-content: center;
-  margin: 50px 100px;
-  font-size: 25px;
+  font-size: 13px;
 }
 
 .lists-right a {
   text-decoration: none;
   color: #b1b1b1;
-  margin: 0px 10px;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin-left:  5px;
+  margin-right:  5px;
 }
 .lists-right a:hover {
   color: rgb(104, 103, 103);
 }
+/* }
+.profile{
+  border-bottom: solid 1px ;
+}
+.request{
+  border-bottom: solid 1px;
+}
+
+.my-req{
+  border-bottom: solid 1px;
+} */
 
   /* スマホ表示時 */
 @media (max-width: 599px) {
+  .app-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 0 0 0;
+  }
   .top-image{
     height: 8vh;
   }
   .subtitle{
-    font-size: 15px;
+    font-size: 13px;
   }
   .lists-right{
-    font-size: 15px;
-    margin: 4% 4%;
+    font-size: 13px;
+    margin-top: 2px;
   }
   .lists-top-right{
-    font-size: 15px;
-  }
-  .lists-top-right a{
-    margin: 0 5px;
-  }
-  .lists-right a:hover{
-    border-bottom: solid 1px rgb(104, 103, 103);
-    padding-bottom: 3px;
+    font-size: 13px;
   }
 }
-
