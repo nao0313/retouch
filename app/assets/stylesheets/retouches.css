@@ -23,6 +23,7 @@
 }
 
 .service-title {
+  margin-top: 0;
   font-size: 8vh;
   font-weight: bolder;
   color: rgb(255, 255, 255);
