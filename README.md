@@ -1,86 +1,45 @@
-# テーブル設計
+# illustratum
 
-## users テーブル
+https://illustratum.herokuapp.com/
 
-| Column   | Type   | Options     |
-| -------- | ------ | ----------- |
-| name     | string | null: false |
-| email    | string | null: false |
-| password | string | null: false |
+## 機能のご紹介
 
-### Association
+### アプリケーション概要 
 
-- has_many :fixes
-- has_many :room_users
-- has_many :room, through: room_users
-- has_many :message
-- has_one  :profiles
+- 初心者向けのSNS投稿型イラスト添削アプリです！
+- 添削して欲しい画像を投稿すると、詳細ページよりコメント、画像の送信が掲示板形式 で表示されます！
 
-## fixes テーブル
+### 制作背景
 
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| title    | string     | null: false                    |
-| comment  | text       | null: false                    |
-| genre_id | integer    | null: false                    |
-| user     | references | null: false, foreign_key: true |
+イラストのアプリは多数ありますが、ほぼ全て中級から上級者、あるいはプロ向けのアプリしかありません。イラストを描く上で早く成長に繋がるのは他者の目で見て意見をもらうことです。初心者がそういったところにイラストをアップするのはかなりハードルが高いです。
+そこで初心者向けで更に添削に特化したアプリを作ろうと思いました。
 
-### Association
+### その他機能
 
-- belongs_to :user
-- has_one    :room
-- has_one_attached :image
+- レスポンシブ対応
+- 投稿編集/削除機能
+- ログイン／ログアウト機能
+- Rspec / factory_botによるテスト機能
 
-## rooms テーブル
+## トップページ
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-|  name   | string     | null: false                    |
-|  fixes  | references | null: false, foreign_key: true |
+https://i.gyazo.com/ff6370d01a9b81ef574e7d6ac428ac1c.jpg
 
-### Association
+## 今後の実装機能
 
-- belongs_to :fix
-- has_many   :room_users
-- has_many   :user, through: room_users
-- has_many   :messages
+- マイページ機能
+- 画像ダウンロード機能
+- 画像の拡大機能
+- コメントの非同期通信
+- 検索機能
 
-## room_users テーブル
+### 使用技術（開発環境）
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-|  room   | references | null: false, foreign_key: true |
-|  user   | references | null: false, foreign_key: true |
+- 言語： HTML, CSS, Ruby
+- フレームワーク： Rubby on Rails
+- DB： mysql
+- サーバー: heroku
 
-### Association
 
-- belongs_to :room
-- belongs_to :user
 
-## messages テーブル
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| comment | text     |                                |
-| room    | references | null: false, foreign_key: true |
-| user    | references | null: false, foreign_key: true |
-
-### Association
-
-- has_many :fixes
-- has_many :users
-- has_one_attached :image
-
-## profiles テーブル
-
-| Column       | Type       | Options                        |
-| ------------ | ---------- | ------------------------------ |
-| genre_id     | integer    |                                |
-| age_id       | integer    |                                |
-| introduction | text       |                                |
-| user         | references | null: false, foreign_key: true |
-
-### Association
-
-- has_one :user
-- has_one_attached :image
