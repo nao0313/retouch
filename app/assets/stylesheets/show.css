@@ -280,15 +280,19 @@ h1{
     width: 100%;
   }
   .form-request-comment {
-    width: 100%;
+    margin-left: -20px;
+    margin-right: 0;
   }
+  /* .form-input {
+    width: 200px;
+  } */
   .message-image{
     width: 100%;
   }
   
   /* コメントフォーム */
 .form-input {
-  width: 100%;
+  width: 250px;
   height: 40px;
 }
 
@@ -296,15 +300,15 @@ h1{
   outline: none;
   border: none;
   height: 40px;
-  width: 100%;
-  margin-left: -20px;
-  margin-right: 40px;
+  width: 200px;
+  margin-left: 0px;
+  margin-right: 0px;
   padding-left: 20px;
-  padding-right: 70px;
+  padding-right: 0px;
   border-radius: 30px 0px 0px 30px;
 }
   .form-image {
-    background: url("../img2.jpeg")center center no-repeat ;
+    background: url("./img2.jpeg")center center no-repeat ;
     background-size: 55%;
     color: white;
     padding-top:15px ;
@@ -316,7 +320,7 @@ h1{
     text-align: center;
   }
   .form-image:hover{
-    background: url("../img.jpeg")center center no-repeat ;
+    background: url("./img.jpeg")center center no-repeat ;
     background-size: 55%;
   }
   .hidden {
