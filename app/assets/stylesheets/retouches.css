@@ -5,14 +5,14 @@
 .service-image {
   padding-bottom: 5px;
   background: url("./top2.jpg") center center no-repeat;
-  background-color:rgba(211, 102, 102, 0.8);
+  background-color:rgba(221, 172, 172, 0.8);
   background-blend-mode:lighten;
   background-size: 100%, 80%;
   width: 100%;
   padding: 3vh ;
   margin-left: auto;
   margin-right: auto;
-  border: black solid 1px;
+  border-bottom: black solid 1px;
 }
 .service {
   text-align: center;
@@ -21,6 +21,7 @@
   color: rgb(49, 49, 49);
   text-shadow: 3px 0px 5px rgba(255, 255, 255, 0.9);
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  padding-bottom: 10px;
 }
 
 .service-title {
@@ -50,13 +51,12 @@
 @media (min-width: 600px){
   .service-image {
     padding-bottom: 0px;
-
     background-blend-mode:lighten;
-
     width: 100%;
     padding: 0 ;
     margin-left: auto;
     margin-right: auto;
-    border: black solid 1px;
+    border-bottom: black solid 1px;
+
   }
 }

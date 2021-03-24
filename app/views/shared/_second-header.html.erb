@@ -9,7 +9,7 @@
     <div class='nav'>
       <div class='lists-right'>
         <%= link_to 'マイページ', "#", class: "profile" %>
-        <%= link_to '添削依頼', new_fix_path,  class: "request" %>
+        <%= link_to '新規リクエスト', new_fix_path,  class: "request" %>
           <% if user_signed_in? %>
             <%= link_to '添削一覧', user_path(current_user), method: :get, class: "my-req" %>
           <% end %>

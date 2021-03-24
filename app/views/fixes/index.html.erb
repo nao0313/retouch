@@ -27,13 +27,12 @@
 
 
   <%# retouch_list %>
+  <div class="request-title-block">
+  <h1 class='request-title'>添削リクエスト</h1>
+  </div>
+  
   <div class='retouch-contents'>
-    <div class='reqest-title-all'>
-      <h2 class='request-title'>修正リクエスト</h2>
-      <%# <%= link_to '新規投稿', new_fix_path, class: "request-subtitle" %>
-    </div>
-
-    <div>
+      <h2 class='request-new'>最新の投稿</h2>
       <div class='retouch-lists'>
         <% @fixes.each do |fix| %>
           <div class='list'>
@@ -63,9 +62,8 @@
           </div>
         <% end %>
       </div>
-    </div>
 
-</div>
+  </div>
 
 
   <%# ページネイション %>
