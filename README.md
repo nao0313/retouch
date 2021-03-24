@@ -27,6 +27,8 @@ https://illustratum.herokuapp.com/
 ## 投稿詳細ページ
 https://user-images.githubusercontent.com/78333344/112331618-6b9c8880-8cfc-11eb-9e0f-b6099bd788b7.mp4
 
+## 投稿一覧ページ
+
 ## 今後の実装機能
 
 - マイページ機能
