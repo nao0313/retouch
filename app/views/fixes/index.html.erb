@@ -2,9 +2,6 @@
 
 <div class="top-background">
 
-  
-
-
 <%# <% 画面上部のアプリメインテーマ説明部 %> 
     <div class='service-image'>
         <div class='service'>
@@ -23,12 +20,9 @@
         </div>
     </div>
  
-
-
-
   <%# retouch_list %>
   <div class="request-title-block">
-  <h1 class='request-title'>添削リクエスト</h1>
+    <h1 class='request-title'>添削リクエスト</h1>
   </div>
   
   <div class='retouch-contents'>
@@ -37,34 +31,27 @@
         <% @fixes.each do |fix| %>
           <div class='list'>
             <%= link_to fix_path(fix.id), method: :get do %>
-          
-            <div class="sid">
-              <%= image_tag fix.image,class: :request_img, method: :get %>
-              <div class='request-info'>
-
-                <div class='index_fix_title'>
-                  <%= link_to fix.title, fix_path(fix.id), class: :top_fix_title, method: :get %>
-                </div>
-
-                <div class="request-name-date">
-                  <div class='index-user-name'>
-                    <%= link_to fix.user.name %>
+              <div class="sid">
+                <%= image_tag fix.image,class: :request_img, method: :get %>
+                <div class='request-info'>
+                  <div class='index_fix_title'>
+                    <%= link_to fix.title, fix_path(fix.id), class: :top_fix_title, method: :get %>
                   </div>
-                  <div class="request-date">
-                    <%= l fix.updated_at %>
+                  <div class="request-name-date">
+                    <div class='index-user-name'>
+                      <%= link_to fix.user.name %>
+                    </div>
+                    <div class="request-date">
+                      <%= l fix.updated_at %>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-        
-
             <% end %>
           </div>
         <% end %>
       </div>
-
   </div>
-
 
   <%# ページネイション %>
   <div class='p-top__paginate'>
