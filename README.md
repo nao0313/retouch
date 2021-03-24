@@ -26,8 +26,7 @@ https://illustratum.herokuapp.com/
 
 ## 投稿詳細ページ
 
-![gif-1](https://user-images.githubusercontent.com/78333344/112333765-38f38f80-8cfe-11eb-8018-f13c7a0371ab.mp4)
-
+[![Image from Gyazo](https://i.gyazo.com/808212e76a65c4f25aaa52141aac0e80.gif)](https://gyazo.com/808212e76a65c4f25aaa52141aac0e80)
 
 ## 投稿一覧ページ
 
