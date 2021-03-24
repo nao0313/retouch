@@ -10,7 +10,6 @@
   background-size: 100%, 80%;
   width: 100%;
   padding: 3vh ;
-  margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
   border: black solid 1px;
@@ -47,4 +46,17 @@
     font-size: 12px;
   }
 
+}
+@media (min-width: 600px){
+  .service-image {
+    padding-bottom: 0px;
+
+    background-blend-mode:lighten;
+
+    width: 100%;
+    padding: 0 ;
+    margin-left: auto;
+    margin-right: auto;
+    border: black solid 1px;
+  }
 }
