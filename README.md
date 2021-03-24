@@ -23,6 +23,7 @@ https://illustratum.herokuapp.com/
 
 ## トップページ
 
+[![Image from Gyazo](https://i.gyazo.com/7d59c3ccbf6e6bd59a999c848621eba7.gif)](https://gyazo.com/7d59c3ccbf6e6bd59a999c848621eba7)
 
 ## 投稿詳細ページ
 
@@ -30,7 +31,7 @@ https://illustratum.herokuapp.com/
 
 ## 投稿一覧ページ
 
-
+[![Image from Gyazo](https://i.gyazo.com/433c44628a8186aadd5d822317e738d3.gif)](https://gyazo.com/433c44628a8186aadd5d822317e738d3)
 
 ## 今後の実装機能
 
