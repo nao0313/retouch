@@ -1,48 +1,18 @@
-<header class='top-page-header'>
+<%= render "shared/second-header"%>
 
-  <div class='app-name'>
-    <div class='top-rogo'>
-      <%= image_tag("logo1.jpg", class:'top-image')%>
-      <h1 class='subtitle'>美しいを追求</h1>
-    </div>
-    
-    <div class='navigate'>
-      <div class='lists-top-right'>
-        <% if user_signed_in? %>
-          <%= link_to current_user.name, "#",  class: "nickname" %>   
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %> 
-        <% else %>
-          <%= link_to 'ログイン', new_user_session_path,  class: "login" %>
-          <%= link_to '新規登録', new_user_registration_path,  class: "sign-up" %>
-        <% end %>
-      </div>
-    </div>
-  </div>
+<div class="top-background">
 
-  <div class='line'>
-  </div>
+  
 
-  <div class='nav'>
-    <div class='lists-right'>
-      <% if user_signed_in? %>
-        <%= link_to 'PROFILE', "#", class: "profile" %>  
-        <%= link_to 'REQUEST', new_fix_path,  class: "request" %>
-        <%= link_to 'MY REQ', user_path(current_user), method: :get, class: "my-req" %>
-      <% end %>
-    </div>
-  </div>
-</header>
 
 <%# <% 画面上部のアプリメインテーマ説明部 %> 
-<div class='main'>
-  <div class='title-contents'>
     <div class='service-image'>
         <div class='service'>
           <h2 class='service-title'>
-           illustear
+            illustratum
           </h2>
           <p class='service-explain'>
-            イラスト修正アプリillustearはイラストを描きたいけどうまくいかない。自分で描いたイラストのどこを修正すればいいのかわからない。
+            イラスト修正アプリillustratumはイラストを描きたいけどうまくいかない。自分で描いたイラストのどこを修正すればいいのかわからない。
           </p>
           <p class='service-explain'>
             そんな疑問を世界中の人に聞いてみよう！自分で描いたイラストに世界中の人が修正を加えてくれる！
@@ -50,13 +20,11 @@
           <p class='service-explain'>
             修正を加えた人も一人では気づけなかった部分に気づいてきっと前よりスキルは上がるはず！
           </p>
-          <%# <p class='service-explain'>
-            みんなで教え合いよりよい作品を作り上げよう！
-          </p>  %>
         </div>
     </div>
-  </div>
-</div>
+ 
+
+
 
   <%# retouch_list %>
   <div class='retouch-contents'>
@@ -66,18 +34,18 @@
     </div>
 
     <div>
-      <ul class='retouch-lists'>
+      <div class='retouch-lists'>
         <% @fixes.each do |fix| %>
-          <li class='list'>
+          <div class='list'>
             <%= link_to fix_path(fix.id), method: :get do %>
           
             <div class="sid">
               <%= image_tag fix.image,class: :request_img, method: :get %>
               <div class='request-info'>
 
-              <div class='index_fix_title'>
-                    <%= link_to fix.title, fix_path(fix.id), class: :top_fix_title, method: :get %>
-                  </div>
+                <div class='index_fix_title'>
+                  <%= link_to fix.title, fix_path(fix.id), class: :top_fix_title, method: :get %>
+                </div>
 
                 <div class="request-name-date">
                   <div class='index-user-name'>
@@ -87,25 +55,24 @@
                     <%= l fix.updated_at %>
                   </div>
                 </div>
-
-                  
-
               </div>
             </div>
         
 
             <% end %>
-          </li>
+          </div>
         <% end %>
-      </ul>
+      </div>
     </div>
 
 </div>
 
 
-<%# ページネイション %>
-<div class='p-top__paginate'>
-  <%= paginate @fixes %>
+  <%# ページネイション %>
+  <div class='p-top__paginate'>
+    <%= paginate @fixes %>
+  </div>
+
 </div>
 
 <%= render partial: "footer" %>

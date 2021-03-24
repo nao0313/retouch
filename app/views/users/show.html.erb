@@ -5,9 +5,9 @@
 </div>
 
 
-  <ul class="request-index-block">
+  <div class="request-index-block">
   <% @fixes.each do |fix| %>
-    <li class='list-request'>
+    <div class='list-request'>
 
 
       <div class="myreq-side-block">
@@ -57,9 +57,9 @@
       </div>
 
 
-    </li>
+    </div>
     <% end %>
-  </ul>
+  </div>
 
 <div class='p-top__paginate'>
   <%= paginate @fixes %>

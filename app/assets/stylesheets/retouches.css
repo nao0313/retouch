@@ -1,50 +1,41 @@
-/* * {
-  border: 1px solid darkred;
-} */
-
-/* .title-contents {
-  color: rgb(0, 0, 0);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-} */
-
-.main{
+.top-background{
 
 }
 
-.service {
+.service-image {
   padding-bottom: 5px;
-  background: url("./top.jpg") center center no-repeat;
-  background-color:rgba(155, 155, 155, 0.8);
+  background: url("./top2.jpg") center center no-repeat;
+  background-color:rgba(211, 102, 102, 0.8);
   background-blend-mode:lighten;
-  background-size: 100%, 100%;
-  width: 80%;
+  background-size: 100%, 80%;
+  width: 100%;
   padding: 3vh ;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
+  border: black solid 1px;
 }
 .service {
   text-align: center;
+  font-size: 15px;
+  font-weight: bolder;
+  color: rgb(49, 49, 49);
+  text-shadow: 3px 0px 5px rgba(255, 255, 255, 0.9);
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .service-title {
   font-size: 8vh;
+  font-weight: bolder;
   color: rgb(255, 255, 255);
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-  letter-spacing: 13px;
+  letter-spacing: 10px;
 }
 
-.service-explain {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-size: 15px;
-  font-weight: bolder;
-  color: rgb(75, 75, 75);
-  text-shadow: 0 0 5px  rgba(255, 255, 255, 0.9);
-}
 
 @media (max-width: 599px){
   .service{
-    background-size: 100%, 100%;
+    width: 100%;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
