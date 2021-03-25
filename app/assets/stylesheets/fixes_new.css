@@ -1,23 +1,20 @@
 .retouch-fix-title{
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
+  font-size: 23px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  margin: 5vh;
+  margin: 5vh 10vh 10vh 10vw;
   color: rgb(151, 151, 151);
 }
 .retouch-fix-main {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  margin-left: 10vw;
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 .errors-messages-new{
-  text-align: center;
   font-size: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   color: rgb(255, 116, 144);
 }
+
+/* ここから入力フォーム */
 .weight-bold-text{
   font-size: 18px;
 }
@@ -29,45 +26,55 @@
   font-size: smaller;
 }
 .click-upload {
-  padding-left: 200px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 .request-text{
-width: 300px;
-margin-bottom: 20px;
+  border: none;
+  outline: none;
+  resize: none;
+  border: rgb(77, 182, 182) solid 2px;
+  width: 60%;
+  margin-bottom: 30px;
 }
 .request-comment{
-  width: 400px;
+  border: none;
+  outline: none;
+  resize: none;
+  border: rgb(77, 182, 182) solid 2px;
+  width: 60%;
   height: 150px;
+  margin-bottom: 30px;
 }
 .select-box{
   width: 150px;
   margin-bottom: 20px;
 }
+.select-box{
+  margin-bottom: 80px;
+}
+
+/* 作成ボタン */
 .request-btn-contents {
-  width: 30%;
-  margin: 0% 0 100px 150px;
+  width: 100px;
+  margin: 0 0 100px 0;
 }
 .request-btn-contents a{
   text-decoration: none;
 }
 .request-btn {
-  display: flex;
-  justify-content: center;
-  margin-top: 20%;
   width: 150%;
-  background: rgb(94, 161, 248);
+  background: rgb(23, 179, 252);
   border: 1px solid rgb(94, 161, 248);
   color: #fff;
   line-height: 40px;
   font-size: 18px;
   cursor: pointer;
-  border-radius: 30px;
 }
 .request-btn:hover{
   background-color: rgb(135, 184, 248);
 }
-.back-btn-position{
+/* .back-btn-position{
   margin-top: 20px;
 }
 .back-btn {
@@ -80,4 +87,33 @@ margin-bottom: 20px;
 }
 .back-btn:hover {
   background-color: rgb(253, 127, 127);
+} */
+
+
+
+
+
+@media(max-width: 599px){
+
+
+  .retouch-fix-title{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 5vh 0;
+    color: rgb(151, 151, 151);
+  }
+  .retouch-fix-main {
+    margin-left: 0;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+  }
+  .click-upload {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+  .request-btn-contents {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
 }

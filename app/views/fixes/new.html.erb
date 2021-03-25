@@ -1,6 +1,6 @@
 <%= render "shared/second-header"%>
 
-  <h2 class="retouch-fix-title">修正リクエストの情報を入力</h2>
+  <h2 class="retouch-fix-title">新規リクエスト情報の入力</h2>
   <div class="retouch-fix-main">
     
     <%= form_with model: @fixes, local: true do |f| %>
@@ -12,15 +12,14 @@
 
     <div class="img-upload">
       <div class="weight-bold-text">
-        修正して欲しい画像<span class="indispensable"> 必須 </span>
+        添削して欲しい画像<span class="indispensable"> 必須 </span>
         <div class="img-file">
         （JPEG PNG形式のみ）
         </div>
-        
       </div>
-      <div class="click-upload">
-        <%= f.file_field :image, id:"retouch-fix-image"%>
-      </div>
+        <div class="click-upload">
+          <%= f.file_field :image, id:"retouch-fix-image"%>
+        </div>
     </div>
 
     <div class="new-request">
@@ -41,7 +40,7 @@
     <div class="request-genre-details">
       <div class="form">
         <div class="weight-bold-text">
-          カテゴリー
+          ジャンル
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"request-category"}) %>
@@ -49,13 +48,12 @@
     </div>
 
     <div class="request-btn-contents">
-      <%= f.submit "依頼作成" ,class:"request-btn" %>
-      <div class="back-btn-position">
+      <%= f.submit "リクエスト作成" ,class:"request-btn" %>
+      <%# <div class="back-btn-position">
       <%=link_to 'Top', root_path, class:"back-btn" %>
-      </div>
+      <%# </div>  %>
     </div>
-
-  </div>
   <% end %>
+  </div>
 
   <%= render partial: "footer" %>
