@@ -8,7 +8,13 @@
   font-size: 30px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
-
+.none-request{
+  text-align: center;
+  font-size: 20px;
+  color: rgb(168, 99, 99);
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
 /* 
 .request-index-block{
  width: 100vw;
@@ -119,6 +125,9 @@ width: 150px;
 .request_index_img{
   height: 200px;
   width: 200px;
+}
+.request_index_img:hover{
+  opacity: 0.9;
 }
 .request-index-name{
   display: flex;

@@ -4,18 +4,23 @@
   <h1 class="myreq">投稿一覧</h1>
 </div>
 
+<% if @fixes.length == 0 %>
+<div class="none-request">
+    まだ投稿はございません
+</div>
+<% end %>
 
   <div class="request-index-block">
   <% @fixes.each do |fix| %>
     <div class='list-request'>
 
-
+    <%= link_to fix_path(fix.id), method: :get do %>
       <div class="myreq-side-block">
         <div class='request-index-info'>
            <div class="request-index-image">
             <%= image_tag fix.image,class: :request_index_img, method: :get %>
            </div>
-          
+          <% end %>
 
             <div class='request-index-name'>
               
