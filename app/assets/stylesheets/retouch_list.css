@@ -157,4 +157,15 @@
   .retouch-lists{
     width: 100%;
   }
+  .request-title-block{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+  .request-title{
+    font-size: 14px;
+    width: 150px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
 }
