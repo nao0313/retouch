@@ -7,10 +7,11 @@
   <div class="retouch-request-brock">
     <div class="center">
 
+  <%= link_to @fixes.image, "data-lightbox" => @fixes.image do %>
     <div class="list-img">
       <%= image_tag @fixes.image,class: :request_list_img %>
     </div>
-
+  <% end %>
       <div class="retouch-request-contents">
         <h1 class="retouch-request-user-name">
           <%= link_to @fixes.user.name%>
@@ -81,9 +82,11 @@
               <div class="message-content">
                 <%= message.comment %>
               </div>
+            <%= link_to message.avatar, "data-lightbox" => message.avatar do %>
               <div class="image-message">
               <%= image_tag message.avatar, class: 'message-image' if message.avatar.attached? %>
               </div>
+            <% end %>
             </div>
           </div>
               
