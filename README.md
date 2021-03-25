@@ -43,7 +43,7 @@ https://illustratum.herokuapp.com/
 
 ### 使用技術（開発環境）
 
-- 言語： HTML, CSS, Ruby, jQuery
+- 言語： HTML, CSS, Ruby, jQuery, JavaScript
 - フレームワーク： Ruby on Rails
 - DB： mysql
 - サーバー: heroku
