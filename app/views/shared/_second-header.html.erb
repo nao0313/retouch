@@ -1,6 +1,6 @@
 <div class="top-lin">
     <div class='top-rogo'>
-      <%= image_tag("logo3.jpg", class:'top-image')%> 
+      <%= image_tag("logo 3.jpg", class:'top-image')%> 
       <h1 class='subtitle'>美しいを追求しよう</h1>
     </div>
 </div>
@@ -11,7 +11,7 @@
         <%= link_to 'マイページ', "#", class: "profile" %>
         <%= link_to '新規リクエスト', new_fix_path,  class: "request" %>
           <% if user_signed_in? %>
-            <%= link_to '添削一覧', user_path(current_user), method: :get, class: "my-req" %>
+            <%= link_to '投稿一覧', user_path(current_user), method: :get, class: "my-req" %>
           <% end %>
       </div>
     </div>
