@@ -1,43 +1,35 @@
 <%= render "shared/second-header"%>
 
-
-
 <div>
-<div class="retouch-request-all">
-  <div class="retouch-request-brock">
-    <div class="center">
-
-  <%= link_to @fixes.image, "data-lightbox" => @fixes.image do %>
-    <div class="list-img">
-      <%= image_tag @fixes.image,class: :request_list_img %>
-    </div>
-  <% end %>
-      <div class="retouch-request-contents">
-        <h1 class="retouch-request-user-name">
-          <%= link_to @fixes.user.name%>
-           <div class="message-date">
-            <%= l @fixes.created_at %>
+  <div class="retouch-request-all">
+    <div class="retouch-request-brock">
+      <div class="center">
+        <%= link_to @fixes.image, "data-lightbox" => @fixes.image do %>
+          <div class="list-img">
+            <%= image_tag @fixes.image,class: :request_list_img %>
           </div>
-        </h1>
-        <h1 class="retouch-request-title">
-          <%= @fixes.title %>
-        </h1>
-        <h2 class="retouch-request-genre">
-          ジャンル： 
-          <%= @fixes.genre.name %>
-        </h2>
-        <h2 class="retouch-request-comment">
-          <span>リクエスト詳細:</span><br>
-          <%= @fixes.comment %>
-        </h2>
+        <% end %>
+        <div class="retouch-request-contents">
+          <h1 class="retouch-request-user-name">
+            <%= link_to @fixes.user.name%>
+            <div class="message-date">
+              <%= l @fixes.created_at %>
+            </div>
+          </h1>
+          <h1 class="retouch-request-title">
+            <%= @fixes.title %>
+          </h1>
+          <h2 class="retouch-request-genre">
+            ジャンル： 
+            <%= @fixes.genre.name %>
+          </h2>
+          <h2 class="retouch-request-comment">
+            <span>リクエスト詳細:</span><br>
+            <%= @fixes.comment %>
+          </h2>
+        </div>
       </div>
-
-
-      
-    </div>
-
       <%# ここからメッセージ入力欄 %>
-      
       <div class="messages">
         <div class="message">
           <div class="title">
@@ -48,95 +40,56 @@
               まだコメントはありません
             </div>
           <% end %>
-
-          
-
           <% @messages.each do |message| %>
-
-          <%# <div class=errors-messages>
-            <%= render partial: 'shared/error_messages', locals: { model: message.object } %>
-          <%# </div> %> 
-
-          
-
-
-
-          
-          <div class="upper-message">
-            <div class="message-user">
-              <%= message.user.name%>
-            </div>
-            <div class="message-date">
-              <%= l message.created_at %>
-            </div>
-          <% if user_signed_in? %>
-          <% if current_user.id == message.user_id %>
-            <div class="retouch-delete-btn">
-              <%= link_to "削 除",fix_message_path(message.id,@fixes.id), data: { confirm: '本当に削除しますか？' }, class: "myreq-destroy-btn", method: :delete %>
-            </div>
-            <% end %>
-          <% end %>
-          </div>
-          
-          
-          <div class="lower-message">
-            <div class="message-back-color">
-              <div class="message-content">
-                <%= message.comment %>
+            <div class="upper-message">
+              <div class="message-user">
+                <%= message.user.name%>
               </div>
-              <% if message.avatar.attached?  %>
-                <%= link_to message.avatar, "data-lightbox" => message.avatar do %>
-                <div class="image-message">
-                  <%= image_tag message.avatar, class: 'message-image' if message.avatar.attached? %>
-                </div>
+              <div class="message-date">
+                <%= l message.created_at %>
+              </div>
+              <% if user_signed_in? %>
+                <% if current_user.id == message.user_id %>
+                  <div class="retouch-delete-btn">
+                    <%= link_to "削 除",fix_message_path(message.id,@fixes.id), data: { confirm: '本当に削除しますか？' }, class: "myreq-destroy-btn", method: :delete %>
+                  </div>
                 <% end %>
               <% end %>
             </div>
-          </div>
-              
-            
+            <div class="lower-message">
+              <div class="message-back-color">
+                <div class="message-content">
+                  <%= message.comment %>
+                </div>
+                <% if message.avatar.attached?  %>
+                  <%= link_to message.avatar, "data-lightbox" => message.avatar do %>
+                    <div class="image-message">
+                      <%= image_tag message.avatar, class: 'message-image' if message.avatar.attached? %>
+                    </div>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
           <% end %>
         </div>
       </div>
-
-          
-
-
-
-
-
-
-
-
-
-
-
-    <% if user_signed_in? %>
-      <%= form_with model: [@fixes, @message], local: true do |f| %>
-        </div>
-          <div class="form-request-comment">
-            <div class="form-input">
-              <%= f.text_field :comment, class: 'form-message', placeholder: '' %>
-               <label class="form-image">
-                  <%= f.file_field :avatar, class: 'hidden' %>
-                </label>
-            </div>
-            <%= f.submit '送信', class: 'form-submit' %>
+      <% if user_signed_in? %>
+        <%= form_with model: [@fixes, @message], local: true do |f| %>
           </div>
-        </div>
+            <div class="form-request-comment">
+              <div class="form-input">
+                <%= f.text_field :comment, class: 'form-message', placeholder: '' %>
+                <label class="form-image">
+                    <%= f.file_field :avatar, class: 'hidden' %>
+                  </label>
+              </div>
+              <%= f.submit '送信', class: 'form-submit' %>
+            </div>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-
-
-
-    <%# <div class="request-room">
-    <div class="request-room-btn">
-      <%= link_to "修正ページへ", class: "room-btn" %>
-    <%# </div>
-    </div> %> 
-
+    </div>
   </div>
 </div>
-</ul>
 
 <%= render  "fixes/footer" %>
