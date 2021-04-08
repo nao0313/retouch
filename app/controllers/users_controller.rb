@@ -7,5 +7,4 @@ class UsersController < ApplicationController
      @fixes = @user.fixes.order("created_at DESC").page(params[:page]).per(10)
   end
 
- 
 end
