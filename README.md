@@ -104,7 +104,7 @@ https://illustratum.herokuapp.com/
 >モデル
 >> [ユーザー機能](spec/models/user_spec.rb)   実装済み <br>
 >> [リクエスト機能](spec/models/fix_spec.rb) 実装済み<br>
->> [コメント機能](spec/models/message_spec.rb)  実装途中
+>> [コメント機能](spec/models/message_spec.rb)  実装済み
 
 > コントローラー
 >> リクエスト機能 実装途中<br>
