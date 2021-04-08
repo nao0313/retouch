@@ -102,13 +102,13 @@ https://illustratum.herokuapp.com/
 
 
 >モデル
->> [ユーザー機能](spec/models/user_spec.rb)   実装済み
+>> [ユーザー機能](spec/models/user_spec.rb)   実装済み <br>
 >> リクエスト機能 実装途中
 >> コメント機能   実装途中
 
 > コントローラー
 >> リクエスト機能 実装途中
->> コメント機能   実装途中
+<br>>> コメント機能   実装途中
 
 - 結合テスト
 
