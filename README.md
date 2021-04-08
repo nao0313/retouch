@@ -48,6 +48,51 @@ https://illustratum.herokuapp.com/
 - DB： mysql
 - サーバー: heroku
 
+## データベース設計
 
+### users テーブル
 
+| Column       | Type     | Option      |
+| ------------ | -------- | ------------|
+| email        | string   | null: false |
+| password     | string   | null: false |
+| name         | string   | null: false |
+| age_id       | interger |             |
+| introduction | text     |             |
+| position     | text     |             |
+
+#### Association
+
+- has_many :fixes
+- has_many :messages
+- has_one_attached :prof_image
+
+### fixes テーブル
+
+| Column     | Type       | Option                         |
+| ---------- | ---------- | -------------------------------|
+| title      | string     | null: false                    |
+| comment    | text       | null: false                    |
+| genre_id   | integer    | null: false                    |
+| user       | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- has_one_attached :image
+- has_many :messages, dependent: :destroy
+
+### messagesテーブル
+
+| Column    | Type        | Option                         |
+| --------- | ----------- | -------------------------------|
+| comment   | text        | null: false                    |
+| user      | references  | null: false, foreign_key: true |
+| fix       | references  | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :fix
+- belongs_to :user
+- has_one_attached :avatar
 
